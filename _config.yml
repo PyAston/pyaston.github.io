@@ -2,7 +2,7 @@
 title: "Jekyll Podcaster"
 description: "A Jekyll Theme designed for Podcasters"
 podcast-description: "A Jekyll Theme designed for Podcasters. This is your podcast's summary."
-url:  "https://jekyll-podcaster.netlify.app/" # Actual base url of the website
+url:  "https://www.hiahiahia.top" # Actual base url of the website
 baseurl: "/"                    # url of the jekyll blog. e.g. if you set url to "mysite.com" and baseurl to "blog", the jekyll website will work on "mysite.com/blog"
 author:
   name: "Alessio Franceschi"
