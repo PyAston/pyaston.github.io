@@ -1,4 +1,22 @@
 ---
+sitemap: false
 ---
 
-@import "base", "background", "header", "sidebar", "home", "post", "archive", "player";
+/*
+ *
+ *  Ramme
+ *
+ *  Designer: Taylan Tatlı
+ *  WEB: http://taylantatli.me
+ *
+*/
+
+// Partials
+@import "variables";
+@import "normalize";
+@import "site";
+@import "googlefonts";
+@import "elements";
+@import "syntax";
+@import "fontawesome";
+@import "print";
