@@ -1,63 +1,69 @@
-/* 设置全局盒模型 */
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
+﻿body {
     font-family: "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
-    font-size: 1rem; /* 使用rem单位 */
-    line-height: 1.42857143;
+    font-size: 14px;
+    line-height: 1.6;
     color: #333333;
     background-color: #F7F7F7;
+    margin: 0;
+    padding: 0;
 }
 
 #page-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
-    padding-left: 0 !important; /* 移除不必要的覆盖样式 */
-}
-
-.page-blank-wrap {
-    width: 100%; /* 更改为100%，以便在小屏幕上充满整个宽度 */
-    max-width: 800px; /* 添加最大宽度 */
-    margin: 25px auto 0;
-    padding: 0 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-.page-blank-wrap .site-error,
-h1,
-h4 {
+.page-blank-wrap {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, .h1 {
-    font-size: 2rem; /* 使用rem单位 */
+.page-blank-wrap .site-error h1 img {
+    max-width: 100%;
+    height: auto;
 }
 
-h4, .h4 {
-    font-size: 1.125rem; /* 使用rem单位 */
+.page-blank-wrap .site-error img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #555555;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
 a {
     color: #4a90e6;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-img {
-    max-width: 100%; /* 图片的最大宽度为100% */
-    height: auto; /* 自动调整高度以保持比例 */
-    vertical-align: middle;
-    border: 0;
-}
-
-/* 媒体查询示例 */
-@media only screen and (max-width: 768px) {
-    .page-blank-wrap {
-        padding: 0 10px; /* 在更小的屏幕上减少左右内边距 */
-    }
+a:hover {
+    color: #2a6db8;
 }
