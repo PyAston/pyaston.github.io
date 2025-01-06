@@ -21,33 +21,9 @@ sass:
   style: compressed
 
 # Social
-# if you don't have any of social below, comment the line.
-#email:
 twitter: AstonPython
 facebook: 100069336799526
-#google:
-  #plus: #username
-  #analytics:
-  #verify:
-  #ad-client:
-  #ad-slot:
-#bing-verify:
 github: PyAston
-#stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin: username
-#xing: username
-#instagram: username
-#lastfm: username
-#tumblr: username
-#pinterest: username
-#foursquare: username
-#steam: username
-#dribbble: username
-#youtube: username
-#soundcloud: username
-#weibo: username
-#flickr: username
-#codepen: username
 
 # Paginate
 # if you don't need pagination, comment the *paginate* configs below
@@ -66,4 +42,17 @@ jekyll-mentions:
     base_url: https://github.com
 
 # Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+exclude: [start.bat, README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+
+# Personal Catalogy
+
+# ham
+collections:
+  ham:
+    output: true
+    permalink: /ham/:path/
+
+languages:
+  - en
+  - zh
+
