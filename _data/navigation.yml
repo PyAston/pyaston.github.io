@@ -1,0 +1,22 @@
+# Site navigation links
+
+- title: 主页
+  url: /
+
+- title: 部落格
+  url: /blog/
+
+- title: 电友天地
+  url: /ham/
+
+- title: 技术交流
+  url: /tech/
+
+- title: Postcrossing
+  url: /Postcrossing/
+
+- title: 关于本站
+  url: /about/
+
+- title: English
+  url: /en/
