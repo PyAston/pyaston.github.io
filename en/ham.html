@@ -8,10 +8,10 @@
     <title>Aston's website</title>
     <meta name="description" content="Simple Jekyll theme for your blog by Taylan Tatlı">
     <meta name="keywords" content="">
-    <link rel="canonical" href="http://localhost:4000/en/">
+    <link rel="canonical" href="http://localhost:4000/en/ham">
         <!-- Twitter Cards -->
     <meta name="twitter:title" content="Aston's website">
-    <meta name="twitter:description" content="A List of Projects">
+    
     <meta name="twitter:site" content="@AstonPython">
     <meta name="twitter:creator" content="@AstonPython">
     <meta name="twitter:card" content="summary">
@@ -20,8 +20,8 @@
     <meta property="og:locale" content="zh_CN">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Aston's website">
-    <meta property="og:description" content="A List of Projects">
-    <meta property="og:url" content="http://localhost:4000/en/">
+    
+    <meta property="og:url" content="http://localhost:4000/en/ham">
     <meta property="og:site_name" content="Aston's website">
     <meta property="og:image" content="/assets/img/Logo.svg">
 
@@ -38,15 +38,17 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/img/Logo.svg">
     <link rel="icon" type="image/png" href="http://localhost:4000/assets/img/Logo.svg">
     <link rel="shortcut icon" href="http://localhost:4000/assets/img/Logo.svg">
-    <!-- Feed -->
-    <link rel="alternate" type="application/rss+xml" title="Aston's website" href="http://localhost:4000/feed.xml" />
+    
+    <!-- No Feed -->
+    <!-- <link rel="alternate" type="application/rss+xml" title="Aston's website" href="http://localhost:4000/feed.xml" /> -->
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/main.css">
 </head>
 
 
 <body>
-        <nav class="nav-home">
+        <nav class="nav">
         <ul class="list">
             
 				    
@@ -73,43 +75,35 @@
         </ul>
     </nav>
 
-    <div class="home">
-        <header class="header-home">
-            <!--<a class="link" href="http://localhost:4000/about/">-->
-            <a>
-                <img class="selfie" alt="Aston's website" src="http://localhost:4000/assets/img/Logo.svg">
-            </a>
-            <h1 class="title-home">Aston's website</h1>
-            <h2 class="description-home">随便看看，随便逛逛</h2>
-                        <div class="social-links">
-                
-                <a href="http://twitter.com/AstonPython" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i></a>
-                <a href="http://facebook.com/100069336799526" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i></a>
-                
-                
-                
-                
-                
-                <a href="http://github.com/PyAston" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            </div>
+    <div class="wrapper">
+        <div class="title">
+            <h1></h1>
+        </div>
+        <div class="article">
+            <p>This is Ham-AmatureRatio in English version.</p>
 
-        </header>
-                <footer class="home-footer">
-            Aston's website © 2025 <!--<a href="http://localhost:4000/feed.xml" target="_blank"><i class="fa fa-fw fa-feed"></i></a>-->
-        </footer>
-
+        </div>
     </div>
-</body>
+        <div class="footer">
+        Aston's website © 2025 <!--<a href="http://localhost:4000/feed.xml" target="_blank"><i class="fa fa-fw fa-feed"></i></a>-->
+    </div>
 
+    <script src="http://localhost:4000/assets/js/jquery-1.12.2.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.goup({
+        trigger: 500,
+        bottomOffset: 10,
+        locationOffset: 20,
+        containerRadius: 0,
+        containerColor: '#fff',
+        arrowColor: '#000',
+        goupSpeed: 'normal'
+    });
+});
+</script>
+
+
+</body>
 </html>
