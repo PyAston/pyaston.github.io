@@ -77,3 +77,14 @@ a {
 a:hover {
     color: #2a6db8;  /* 悬停时改变链接的颜色 */
 }
+
+.card {
+    max-width: 800px; 
+    width: 100%; 
+    padding: 20px; 
+    background-color: #f4f2f2; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+}
