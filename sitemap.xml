@@ -30,6 +30,9 @@
 <loc>https://bg5jkh.com/blog/The-First-Blog.html</loc>
 </url>
 <url>
+<loc>https://bg5jkh.com/philately/designed/XF-2025.1.html</loc>
+</url>
+<url>
 <loc>https://bg5jkh.com/en/about/</loc>
 </url>
 <url>
@@ -43,9 +46,6 @@
 </url>
 <url>
 <loc>https://bg5jkh.com/blog/picture/</loc>
-</url>
-<url>
-<loc>https://bg5jkh.com/blog/diary/</loc>
 </url>
 <url>
 <loc>https://bg5jkh.com/en/blog/</loc>
@@ -66,7 +66,7 @@
 <loc>https://bg5jkh.com/ham/QSLcard/sent/</loc>
 </url>
 <url>
-<loc>https://bg5jkh.com/blog/diary/picture/</loc>
+<loc>https://bg5jkh.com/blog/diary/</loc>
 </url>
 <url>
 <loc>https://bg5jkh.com/tech/</loc>
@@ -84,7 +84,7 @@
 <loc>https://bg5jkh.com/philately/designed/</loc>
 </url>
 <url>
-<loc>https://bg5jkh.com/philately/realpost</loc>
+<loc>https://bg5jkh.com/blog/diary/picture/</loc>
 </url>
 <url>
 <loc>https://bg5jkh.com/philately/postcrossing/Japan</loc>
@@ -96,6 +96,9 @@
 <loc>https://bg5jkh.com/philately/postcrossing/</loc>
 </url>
 <url>
+<loc>https://bg5jkh.com/philately/realpost</loc>
+</url>
+<url>
 <loc>https://bg5jkh.com/ham/myDevice.html</loc>
 </url>
 <url>
@@ -103,8 +106,5 @@
 </url>
 <url>
 <loc>https://bg5jkh.com/ham/record.html</loc>
-</url>
-<url>
-<loc>https://bg5jkh.com/philately/designed/XF-2025.1.html</loc>
 </url>
 </urlset>
