@@ -266,5 +266,16 @@ $(document).ready(function(){
 </script>
 
 
+<!-- 引入jekyll search.js-->
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    limit: 20,
+    noResultsText: '没有找到相关内容'
+  });
+</script>
+
 </body>
 </html>

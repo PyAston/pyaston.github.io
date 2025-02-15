@@ -81,7 +81,7 @@
             <br>
         </div>
             <div class="article"><center>欢迎来到我的部落格！博客，即 Blog，又可译为部落格。第一次接触到部落格这个词是在恶作剧之吻中，直树&amp;湘琴*爱的小窝。</center></div>
-<div class="directory-list"><ul><li><a href="/blog/diary/index.html">日记</a></li></ul></div>
+<div class="directory-list"></div>
 <div class="page-list"><ul><li><a href="/blog/The-First-Blog.html">我的第一篇部落格</a></li></ul></div>
 
     </div>
@@ -105,6 +105,17 @@ $(document).ready(function(){
 });
 </script>
 
+
+<!-- 引入jekyll search.js-->
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    limit: 20,
+    noResultsText: '没有找到相关内容'
+  });
+</script>
 
 </body>
 </html>
