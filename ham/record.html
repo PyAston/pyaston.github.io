@@ -25,12 +25,6 @@
     <meta property="og:site_name" content="Aston & BG5JKH's website">
     <meta property="og:image" content="/assets/img/Logo.svg">
 
-    <div id="search-container">
-    <input type="text" id="search-input" placeholder="在找什么吗？">
-    <ul id="results-container"></ul>
-</div>
-
-<script src="/assets/js/simple-jekyll-search.min.js"></script>
     
     
     <!-- Handheld -->
@@ -45,9 +39,6 @@
     <link rel="icon" type="image/png" href="https://bg5jkh.com/assets/img/Logo.svg">
     <link rel="shortcut icon" href="https://bg5jkh.com/assets/img/Logo.svg">
     
-    <!-- No Feed -->
-    <!-- <link rel="alternate" type="application/rss+xml" title="Aston & BG5JKH's website" href="https://bg5jkh.com/feed.xml" /> -->
-
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="https://bg5jkh.com/assets/css/main.css">
 </head>
@@ -195,17 +186,6 @@ $(document).ready(function(){
 });
 </script>
 
-
-<!-- 引入jekyll search.js-->
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    limit: 20,
-    noResultsText: '没有找到相关内容'
-  });
-</script>
 
 </body>
 </html>
