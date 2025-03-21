@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+		>
+<channel>
+	<title>“彩虹QQ号码专卖” 的评论</title>
+	<atom:link href="http://www.iieii.com/?feed=comments-rss2" rel="self" type="application/rss+xml" />
+	<link>http://www.iieii.com</link>
+	<description>致力让每位用户拥有自己最心意的号码！</description>
+	<lastBuildDate>Fri, 03 Sep 2010 06:59:50 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<item>
+		<title>WordPress先生 关于 彩虹QQ网店全新改版！ 的评论</title>
+		<link>http://www.iieii.com/?p=1&#038;cpage=1#comment-1</link>
+		<dc:creator>WordPress先生</dc:creator>
+		<pubDate>Fri, 03 Sep 2010 06:59:50 +0000</pubDate>
+		<guid isPermaLink="false">http://www.iieii.com/?p=1#comment-1</guid>
+		<description>嗨，这是一条评论。&lt;br /&gt;要删除一条评论，请先登录系统，查看这篇文章的评论，然后您可以看到编辑或者删除评论的选项。</description>
+		<content:encoded><![CDATA[<p>嗨，这是一条评论。<br />要删除一条评论，请先登录系统，查看这篇文章的评论，然后您可以看到编辑或者删除评论的选项。</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>111 关于 查号方法 的评论</title>
+		<link>http://www.iieii.com/?p=218&#038;cpage=1#comment-5</link>
+		<dc:creator>111</dc:creator>
+		<pubDate>Fri, 03 Sep 2010 02:26:13 +0000</pubDate>
+		<guid isPermaLink="false">http://www.iieii.com/?p=1#comment-5</guid>
+		<description>3333</description>
+		<content:encoded><![CDATA[<p>3333</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>admin 关于 关于 的评论</title>
+		<link>http://www.iieii.com/?page_id=48&#038;cpage=1#comment-3</link>
+		<dc:creator>admin</dc:creator>
+		<pubDate>Wed, 01 Sep 2010 00:51:10 +0000</pubDate>
+		<guid isPermaLink="false">http://localhost:1108/0/wp292/?page_id=2#comment-3</guid>
+		<description>111111</description>
+		<content:encoded><![CDATA[<p>111111</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>WordPress先生 关于 查号方法 的评论</title>
+		<link>http://www.iieii.com/?p=218&#038;cpage=1#comment-4</link>
+		<dc:creator>WordPress先生</dc:creator>
+		<pubDate>Tue, 31 Aug 2010 11:16:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.iieii.com/?p=1#comment-4</guid>
+		<description>嗨，这是一条评论。&lt;br /&gt;要删除一条评论，请先登录系统，查看这篇文章的评论，然后您可以看到编辑或者删除评论的选项。</description>
+		<content:encoded><![CDATA[<p>嗨，这是一条评论。<br />要删除一条评论，请先登录系统，查看这篇文章的评论，然后您可以看到编辑或者删除评论的选项。</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,272 @@
+/*
+Theme Name: 中品网络营销顾问
+Theme URI: http://www.chinesebreed.com/
+Description: 中品网络营销顾问主站风格。
+Version: 1.0
+Author: ChineseBreed
+Author URI: http://www.chinesebreed.com/
+Tags: 网络营销
+*/
+
+/* Normal */
+body, h1, h2, h3, h4, ol, ul, li, a, p, span, blockquote, form, div, img, dl, dt, dd { margin: 0; padding: 0;}
+body { background: #FFF url('images/bg_nav.png') repeat-x 0 -333px; color: #333333; font: 12px Verdana,Simsun,Helvetica,Arial,sans-serif;}
+a { color: #325E7F; text-decoration: none;}
+a:hover { text-decoration: underline;}
+ol, ul, li { list-style-type: none;}
+img { border: 0;}
+h1, h2, h3, h4 { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-weight: bold;}
+h1 { font-size: 21px;}
+h2 { font-size: 18px;}
+h3 { font-size: 16px;}
+h4 { font-size: 14px;}
+
+/* Wrap */
+#wrap { width: 980px; margin: 0 auto; text-align: center;}
+
+/* Public */
+#menu ul li.current_page_item,
+#menu ul li.current_page_item a,
+#menu h4,
+#searchform,
+.screen-reader-text,
+#searchsubmit,
+#topnav,
+#topnav ul,
+#topnav li { background-image: url('images/bg_nav.png'); background-repeat: no-repeat;}
+
+.title,
+.bottom,
+.title .current,
+#focus #tabs,
+#focus #tabs li a,
+#focus #tabs li a.current,
+#focus #tabs li a.current:hover,
+#sidebar #login dt,
+#sidebar #login .submit,
+#sidebar #login .botton,
+#commentform #submit { background-image: url('images/bg_index.png'); background-repeat: no-repeat;}
+
+#menu h4 span,
+.list li,
+#sidenav li,
+#sidebar #login dd,
+.posttags { background-image: url('images/icon.gif'); background-repeat: no-repeat;}
+	
+/* Header */
+#header { position: relative; height: 130px; background: url('images/bg_season.jpg') no-repeat 50% 0;}
+#header h1 a { position: absolute; left: 0; top: 0px; width: 280px; height: 80px; line-height: 200px; background: url('images/logo.gif') no-repeat; font-size: 0; overflow: hidden;}
+#header .description { position: absolute; left: 0; top: 65px; width: 145px; color: #A0A0A0; text-align: center;}
+
+/* Search */ 
+#searchform { position: absolute; right: 0; top: 45px; height: 22px; background-position: 0 -25px;}
+#searchform .screen-reader-text { float: left; width: 5px; height: 22px; text-indent: -9999px; display: block;}
+#searchform #s { float: left; height: 20px; padding-top: 2px; background: none; border: 0; color: #8C8C8C;}
+#searchform #searchsubmit { float: left; width: 62px; height: 22px; background-position: 0 -50px; border: 0; font-size: 12px; font-weight: bold; display: block; overflow: hidden;}
+
+/* Menu */
+#menu { position: absolute; left: 0; top: 80px;}
+#menu ul { float: left;}
+#menu ul li { float: left; position: relative;}
+#menu ul li a { float: left; height: 43px; line-height: 43px; padding: 0 10px; font-size: 14px; color: #FFF; display: block;}
+#menu ul li a:hover { color: #FFD200; text-decoration: none;}
+#menu ul li.current_page_item { height: 38px; margin-top: 4px; background-color: #FFF; background-position: 0 -270px;}
+#menu ul li.current_page_item a { background-position: 100% -270px; line-height: 35px; color: #7D0000;}
+
+#menu ul ul { position: absolute; left: 50%; top: 41px; margin-left: -58px; width: 116px; padding: 5px 0; background: #FFF url('images/bg_subnav.png') repeat-x; border: 1px solid #A10000; display: none; opacity: .9; z-index: 99;}
+#menu ul ul li a { width: 106px; height: 22px; padding: 0 5px; line-height: 22px; font-size: 12px; color: #325E7F; display: block;}
+#menu ul ul li a:hover { background-color: #C4D3DF; color: #325E7F;}
+
+#menu h4 { float: left; width: 60px; height: 27px; padding: 15px 0 0 80px; background-position: 0 -220px;}
+#menu h4 span { padding-right: 20px; background-position: 100% -2px; font: 12px Verdana,Simsun,Helvetica,Arial,sans-serif; color: #FF9C00;}
+
+/* TopNav */
+#topnav, #topnav ul, #topnav li { height: 26px;}
+#topnav { position: absolute; right: 0; top: 0; background-position: 100% -140px;}
+#topnav ul { float: right; padding: 0 3px; background-position: 0 -80px;}
+#topnav li { float: left; padding: 0; background-position: 0 -110px; background-repeat: repeat-x;}
+#topnav a { padding: 0 5px; line-height: 25px;}
+#topnav ul ul { position: absolute; width: 100px; padding: 5px 0; background: #FFF; border: 1px solid #DFDFDF; display: none; z-index: 99;}
+
+/* Main */		
+#main { clear: both; margin-top: 10px; text-align: left;}	
+
+.title { height: 30px; line-height: 35px; font-size: 13px; text-indent: 20px;}
+.detail { height: 1%; background-color: #FFF; border-width: 0 1px; border-style: solid; border-color: #D4D4D4; overflow: hidden;}
+.bottom { clear: both; height: 15px; margin-bottom: 10px; font-size: 0; line-height: 0;}
+
+.title span { float: left; width: 132px; height: 38px; line-height: 38px; color: #325E7F; text-align: center; cursor: pointer; display: block;}
+.title .current { background-position: -440px -30px; color: #595959;}
+
+.thumb { float: left; width: 150px; text-align: center;}
+.thumb dt { width: 150px; height: 110px; overflow: hidden;}
+.list li { padding-left: 10px; padding-bottom: 8px; background-position: 0 -150px;}
+
+/* Content */		
+#content { float: left; width: 740px; line-height: 1.4em;}
+.middlecolumn { float: right; width: 520px; overflow: hidden;}
+.middlecolumn .title { text-indent: inherit;}
+
+.narrowcolumn .title { height: 38px; background-position: -220px -110px;}
+.narrowcolumn .detail { padding: 12px 10px 0;}
+.narrowcolumn .bottom { height: 20px; background-position: -220px -150px;}
+
+.widecolumn .title { background-position: 0 -180px;}
+.widecolumn .title span { height: 30px; line-height: 30px; }
+.widecolumn .detail { padding: 10px 15px 5px;}
+.widecolumn .bottom { background-position: 0 -225px;}
+
+.widecolumn .thumb { margin-right: 15px; width: 150px; height: 110px; overflow: hidden;}
+	
+/* Focus */	
+#focus { width: 520px; height: 186px; margin-bottom: 10px; overflow: hidden;}
+#focus #items { position: relative; width: 520px; height: 160px; overflow: hidden;}
+#focus #items li { position: absolute; width: 520px; height: 160px;}
+		
+#focus #tabs { height: 26px; padding: 0 2px; background-position: -220px 0; overflow: hidden;}
+#focus #tabs li { float: left;}
+#focus #tabs li a { float: left; width: 103px; height: 20px; padding-top: 6px; background-position: -220px -30px; text-align: center; text-decoration: none; display: block; overflow: hidden;}
+#focus #tabs li a.current, #focus #tabs li a.current:hover { background-position: -330px -30px; color: #FFF;}
+
+/* News */	
+#news .title { height: 30px; background-position: -220px -70px;}
+#news .title span { height: 30px; line-height: 30px;}
+#news .thumb { padding: 15px 0 0 20px;}
+#news .list { float: right; width: 310px;}
+#news .list li { padding-left: 0; background: none; overflow: hidden;}
+#news .list li strong { float: left; padding-right: 5px; font-weight: normal; color: #325E7F;}
+#news .list li span { float: left; width: 155px; white-space: nowrap;}
+#news .list li em { float: right; margin-right: 10px; font-style: normal; color: #8C8C8C;}
+
+/* Photos */	
+#photos .thumb { margin: 5px 8px; _margin: 5px 6px;}
+
+/* Cats */	
+#cats .list li { float: left; width: 230px;height:17px;line-height:22px;overflow:hidden;}
+	
+/* Sidebar */
+#sidebar { float: right; width: 230px;}
+#sidebar .title { background-position: -750px -30px;}
+#sidebar .detail { padding: 10px 20px 0;}
+#sidebar .bottom { background-position: -750px -65px;}
+
+#sidebar #login .detail { padding: 5px 5px 0;}
+#sidebar #login p { margin: 8px; overflow: hidden;}
+#sidebar #login label { margin-right: 5px;}
+#sidebar #login #log, #sidebar #login #pwd { width: 165px; border: 1px solid #D4D4D4;}
+#sidebar #login .submit { float: left; width: 60px; height: 22px; line-height: 22px; margin-left: 60px; _margin-left: 25px; background-position: -120px -60px; border: 0; color: #FFF; font-size: 12px; font-weight: bold; display: block; overflow: hidden;}
+#sidebar #login .register { clear: both; text-align: center;}
+#sidebar #login dl { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dotted #C7C7C7;}
+#sidebar #login dt { height: 50px; margin-bottom: 10px; padding: 0 10px; background-position: -750px -85px; line-height: 40px;}
+#sidebar #login dd {margin: 0 10px 5px 2px; padding-left: 6px; background-position: 0 -100px; display: inline;}
+#sidebar #login .botton { width: 82px; height: 20px; line-height: 20px; margin-left: 60px; background-position: 0 -60px; color: #004B62; font-weight: bold; text-indent: 25px; display: block; overflow: hidden;}
+#sidebar .list li { height: 25px; line-height: 25px; padding-bottom: 0; background-position: 0 -145px; overflow: hidden;}
+
+#sidenav { float: left; width: 210px;}
+#sidenav .title { background-position: 0 0;}
+#sidenav .detail { padding: 15px 25px 5px;}
+#sidenav .bottom { background-position: 0 -35px;}
+#sidenav li { margin-bottom: 8px; padding-left: 0; background-position: 2px -252px; border-bottom: 1px dotted #C7C7C7; text-indent: 25px;}
+#sidenav ul ul { position: absolute; width: 210px; margin: -25px 0 0 183px; _margin: -13px 0 0 128px; padding: 10px; background-color: #FFF; border: 1px solid #D4D4D4; display: none; z-index: 99;}
+			
+/* Footer */	
+#footer { clear: both; padding: 20px 0; overflow: hidden;}
+#footer a { color: #325E7F;}
+#footer .foot_link { padding-bottom: 3px;}
+#footer p { padding-bottom: 6px;}
+/* footerlist */
+#footerlist { background:#F2F2F2; clear: both; margin: 0 0 10px; width: 100%;border-top: 10px solid #fff;font:normal 13px arial, times, serif;width:100%; overflow:hidden;}
+#footerlist ul {padding:5px;text-align:center;}
+#footerlist ul li {list-style-type: none;display:inline;margin: 0;padding: 0;}
+#footerlist ul li a {padding:5px;margin: 0;}	
+/* Links */	
+#links {clear: both;margin: 0 auto;padding: 0 0 10px;background-color: #FFF; border: 1px solid #D4D4D4;text-align: left;overflow: hidden;}	
+*+html #links {*margin: 10px auto 0;} 
+#links h2 {color: #000000;background:#F2F2F2;height: 30px; line-height: 35px; font-size: 13px; text-indent: 20px;}
+#links ul span {height: 30px; line-height: 35px; font-size: 13px; float: right;color: #000000;font-size: 11px;text-indent: 10px;background:#F2F2F2;padding-RIGHT:15px;}
+#links ul ul {padding: 10px 15px 10px;}
+#links ul ul li {display: inline;margin-right: 8px;}
+#links ul ul li a{line-height: 23px;font-size: 12px;}
+/* Post */	
+.breadcrumb { margin-bottom: 10px; height: 20px; line-height: 20px;}
+#single { height: 5px;}
+.post { margin: 5px 0 15px; padding: 5px 0 15px; border-bottom: 1px solid #D4D4D4; text-align: justify; overflow: hidden;}
+.pagetitle { font-size: 14px;}
+.posttitle { margin-bottom: 10px; font-size: 21px; color: #353535;}
+.post hr { display: block;}
+.catlist { float: left;}
+.entry { padding: 10px 10px;font-size: 13px; line-height: 180%;}
+.entry p {font-size: 14px; line-height: 28px;}
+.postmeta { padding-bottom: 5px; border-bottom: 1px dotted #C7C7C7;}
+.posttags { padding-left: 20px; padding-bottom: 10px; background-position: 0 -303px;}
+.postfoot { clear: both; margin-top: 10px; overflow: hidden;}
+.relatedposts, .catposts { float: left; width: 330px; padding: 0 10px; background: url('images/bg_post.png') repeat-x 5px 20px;}
+.relatedposts { margin-right: 5px;}
+.relatedposts h3, .catposts h3 { padding-bottom: 20px;}
+.smallattachment { float: left; width: 128px; margin: 5px 5px 5px 0; text-align: center;}
+.attachment { text-align: center; margin: 5px 0;}
+	
+/* Comment */
+#comments { clear: both; border-width: 2px 1px 1px; border-style: solid; border-color: #D13333 #D4D4D4 #D4D4D4; overflow: hidden;}
+.commenttitle { padding: 8px 5px; background-color: #F2F2F2; border-width: 1px 0; border-style: solid; border-color: #D4D4D4; font-size: 12px;}
+.commentlist { clear: both; margin: 10px 0; padding: 0 10px; text-align: justify;}
+.commentlist li { margin-bottom: 10px; padding: 10px 0; border-bottom: 1px dashed #C7C7C7; overflow: hidden;}
+.comment-author .fn { padding: 5px 0 5px 10px; border-left: 8px solid #D13333; font-style: normal; font-weight: bold;}
+.comment-author .fn a { color: #333;}
+.comment-author .says { display: none;}
+.comment-author .avatar { float: right;}
+.comment-meta { margin: 10px 0;}
+.comment-meta a { color: #B5B5B5;}
+
+.comment .children li { margin: 10px; padding: 10px; border: 1px solid #D5D5D5;}
+.comment .children .odd { background-color: #F8F8F8;}
+.comment .children .even { background-color: #FFF;}
+
+.nocomments { text-align: center; margin: 0; padding: 0;}
+
+
+.reply { padding-top: 10px;}
+.cancel-comment-reply-link { margin: 10px 0 0; font-size: 14px; color: #F60;}
+
+#respond { margin: 10px 0 ; overflow: hidden;}
+#respond:after { clear: both; content: "."; display: block; height: 0; visibility: hidden;}
+#commentform { padding: 10px;}
+#commentform p { margin: 10px 0; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;}
+#commentform #author, #commentform #email, #commentform #url { width: 200px; padding: 2px;}
+#commentform label { margin-left: 5px;}	
+#commentform label small { font-size: 12px; color: #999;}
+#commentform { margin: 5px 10px 0 0;}
+#commentform textarea { width: 580px; padding: 2px;}
+#commentform #submit { width: 133px; height: 35px; background-position: 0 -90px; border: 0; color: #FFF; font-size: 16px; font-weight: bold; display: block; overflow: hidden;}
+
+hr { display: none;}
+a img { border: 0;}
+p img { max-width: 100%;}
+select { width: 130px;}			
+small { font-family: Arial, Helvetica, Sans-Serif; font-size: 0.9em; line-height: 1.5em;}
+small, blockquote, strike { color: #777;}
+code { font: 1.1em 'Courier New', Courier, Fixed;}
+acronym, abbr, span.caps { font-size: 0.9em; letter-spacing: .07em;}
+acronym, abbr, span.caps { cursor: help;}
+acronym, abbr { border-bottom: 1px dashed #999;}
+blockquote { margin: 5px 0; padding: 8px 12px 8px 36px; background: #F4F5F7 url('images/blockquote.gif') no-repeat 3px 3px; border: 1px dashed #CCC;}
+blockquote cite { margin: 5px 0 0; display: block;}
+
+.clear { clear: both;}
+.center { text-align: center;}
+img.centered { display: block; margin-left: auto; margin-right: auto;}
+img.alignright { padding: 4px; margin: 0 0 2px 7px; display: inline;}
+img.alignleft { padding: 4px; margin: 0 7px 2px 0; display: inline;}
+.alignright { float: right;}
+.alignleft { float: left}	
+.hidden { display: none;}
+.navigation { clear: both; margin-bottom: 20px; display: block; overflow: hidden;}
+.aligncenter, div.aligncenter { display: block; margin-left: auto; margin-right: auto;}
+
+.wp-pagenavi { clear: both; margin-bottom: 20px; display: block;}
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:visited { color: #333 !important; background-color: #FAFAFA !important; border: 1px solid #BCBCBC !important;}
+.wp-pagenavi a:hover { border: 1px solid #666 !important;}
+.wp-pagenavi a:active { border: 1px solid #666 !important;}
+.wp-pagenavi span.pages, .wp-pagenavi span.extend { color: #333 !important; background-color: #FAFAFA !important; border: 1px solid #BCBCBC !important;}
+.wp-pagenavi span.current { color: #FFF !important; background-color: #666 !important; border: 1px solid #666 !important;}
+.page_next a, .page_pro a { border: 1px solid #666 !important;}

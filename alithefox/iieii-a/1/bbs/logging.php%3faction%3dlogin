@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title> QQ世界 QQ号码交易 - Powered by Discuz!</title>
+<meta name="keywords" content="Discuz!,Board,Comsenz,forums,bulletin board,QQ号码交易">
+<meta name="description" content="QQ世界 QQ号码交易 - Discuz! Board">
+<meta name="generator" content="Discuz! 5.0.0 with Templates 5.0.0">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta http-equiv="MSThemeCompatible" content="Yes">
+<link rel="stylesheet" type="text/css" id="css" href="forumdata/cache/style_1.css">
+<script type="text/javascript" src="include/common.js"></script>
+<script type="text/javascript" src="include/menu.js"></script>
+</head>
+<body onkeydown="if(event.keyCode==27) return false;">
+
+<center>
+<div class="mainborder"></div>
+<div class="headerline" style="height: 6px"></div>
+<div class="maintable"><div style="width: 100%; height: 78px; text-align: left;">
+<a href="index.php"><img src="images/default/logo.gif" alt="QQ世界" border="0" /></a>
+</div></div>
+
+<div class="headerline" style="height: 6px"></div>
+<div class="headermenu">
+<div class="maintable">
+<div class="right" id="menu">
+<span class="bold">游客: &nbsp;</span><a href="register.php">注册</a>
+| <a href="logging.php?action=login">登录</a>
+| <a href="faq.php">帮助</a>
+</div></div></div>
+<div class="headerline" style="height: 6px"></div>
+
+<div class="maintable"><br><div class="subtable nav" style="width: 98%">
+<a href="index.php">QQ世界</a> &raquo; 会员登录
+</div><br>
+
+<form method="post" name="login" action="logging.php?action=login&amp;">
+<input type="hidden" name="formhash" value="cc0db89a">
+<input type="hidden" name="referer" value="index.php">
+<div class="spaceborder" style="width: 98%"><table cellspacing="0" cellpadding="4" width="100%" align="center">
+<tr class="header">
+<td colspan="2">会员登录</td>
+</tr>
+<tr>
+<td class="altbg1"><span class="bold">
+<input class="radio" type="radio" name="loginfield" value="username" checked onclick="document.login.username.focus();">用户名
+<input class="radio" type="radio" name="loginfield" value="uid" onclick="document.login.username.focus();">UID</span>
+</td>
+<td class="altbg2">
+<span class="smalltxt">
+<input type="text" name="username" size="25" maxlength="40" tabindex="2"> &nbsp;<a href="register.php">立即注册</a>
+</span>
+</td>
+</tr>
+<tr>
+<td class="altbg1"><span class="bold">密码</span></td>
+<td class="altbg2">
+<span class="smalltxt">
+<input type="password" name="password" size="25" tabindex="3"> &nbsp;<a href="member.php?action=lostpasswd">忘记密码</a>
+</span>
+</td>
+</tr>
+<tr>
+<td class="altbg1" valign="top"><span class="bold">安全提问</span></td>
+<td class="altbg2">
+<span class="smalltxt">
+<select name="questionid" tabindex="4">
+<option value="0">无安全提问</option>
+<option value="1">母亲的名字</option>
+<option value="2">爷爷的名字</option>
+<option value="3">父亲出生的城市</option>
+<option value="4">您其中一位老师的名字</option>
+<option value="5">您个人计算机的型号</option>
+<option value="6">您最喜欢的餐馆名称</option>
+<option value="7">驾驶执照的最后四位数字</option>
+</select>
+</span><div style="padding:3px, 0px">如果您设置了安全提问，请在此输入正确的问题和回答</div>
+</td></tr>
+<tr>
+<td class="altbg1"><span class="bold">回答</span></td>
+<td class="altbg2"><input type="text" name="answer" size="50" tabindex="5"></td>
+</tr>
+<tr>
+<td class="altbg1"><span class="bold">Cookie 有效期</span></td>
+<td class="altbg2"><span class="smalltxt">
+<input class="radio" type="radio" name="cookietime" value="315360000" > 永久 &nbsp;
+<input class="radio" type="radio" name="cookietime" value="2592000" checked> 一个月 &nbsp;
+<input class="radio" type="radio" name="cookietime" value="86400" > 一天 &nbsp;
+<input class="radio" type="radio" name="cookietime" value="3600" > 一小时 &nbsp;
+<input class="radio" type="radio" name="cookietime" value="0" > 浏览器进程 &nbsp; &nbsp;
+<img src="images/default/faq.gif" alt="帮助" border="0" />
+<a href="faq.php?page=usermaint#2" target="_blank">帮助</a></span>
+</td>
+</tr>
+<tr>
+<td class="altbg1"><span class="bold">隐身登录</span></td>
+<td class="altbg2"><span class="smalltxt">
+<select name="loginmode">
+<option value=""> - 使用默认 -</option>
+<option value="normal"> 正常模式</option>
+<option value="invisible"> 隐身模式</option>
+</select></span>
+</td>
+</tr>
+<tr class="bottom">
+<td class="altbg1"><span class="bold">界面风格</span></td>
+<td class="altbg2"><select name="styleid"><option value="">- 使用默认 -</option>
+<option value="1">默认风格</option>
+</select>
+</td>
+</tr>
+</table></div><br>
+<div class="option"><div class="submitbutton"><input class="button" type="submit" name="loginsubmit" value="提 &nbsp; 交"></div></div>
+</form>
+
+<script type="text/javascript">
+document.login.username.focus();
+
+var mydate = new Date();
+var mytimestamp = parseInt(mydate.valueOf() / 1000);
+if(Math.abs(mytimestamp - 1298627660) > 86400) {
+window.alert('注意:\n\n您本地计算机的时间设定与论坛时间相差超过 24 个小时，\n这可能会影响您的正常登录，请调整本地计算机设置。\n\n当前论坛时间是: (GMT +8) 2011-2-25 17:54\n如果您认为论坛时间不准确，请与论坛管理员联系。');
+}
+</script>
+<br>
+</div>
+
+<div class="maintable" style="color: #666; clear: both;">
+当前时区 GMT+8, 现在时间是 2011-2-25 17:54<br><br></div>
+
+<div class="footerline"><div><a href="#top"><img border="0" src="images/default/footer_top.gif" alt="" /></a></div></div>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" class="altbg1" style="padding: 5px 0px;">
+<tr><td width="80" style="padding-left: 30px">
+<a href="http://www.discuz.net" target="_blank"><img src="images/default/discuz_icon.gif" border="0" alt="" /></a>&nbsp;&nbsp;&nbsp;
+<a href="http://www.alipay.com" target="_blank"><img src="images/default/alipay_icon.gif" border="0" alt="&#26412;&#35770;&#22363;&#25903;&#20184;&#24179;&#21488;&#30001;&#25903;&#20184;&#23453;&#25552;&#20379;
+&#25658;&#25163;&#25171;&#36896;&#23433;&#20840;&#35802;&#20449;&#30340;&#20132;&#26131;&#31038;&#21306;" /></a></td>
+<td style="font-size: 11px">
+Powered by <a href="http://www.discuz.net" target="_blank" style="color: blue"><b>Discuz!</b></a> <b style="color:#68d300">5.0.0</b>
+&nbsp;&copy; 2001-2006 <a href="http://www.comsenz.com" target="_blank">Comsenz Inc.</a>
+</td>
+<td valign="bottom" align="right" style="padding-right: 30px">
+<div class="right" style="font: 9px Arial; position: relative; top: -5px; padding-right: 7px; color: #154BA0"><a href="#top">TOP</a></div><br>
+<a href="member.php?action=clearcookies&amp;formhash=cc0db89a">清除 Cookies</a> - <a href="mailto:nybang@163.com">联系我们</a> - <a href="http://www.iieii.com/" target="_blank">QQ世界</a>
+ - <a href="archiver/" target="_blank">Archiver</a>
+</td></tr></table>
+<a name="bottom"></a>
+<div class="mainborder"></div>
+</center>
+</body></html>
