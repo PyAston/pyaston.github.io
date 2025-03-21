@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<style>
+html,body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,blockquote,pre,form,input,textarea,fieldset,table,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font-size:12px;font-family:"微软雅黑",Tahoma, Arial, Helvetica}
+body{background:#fff; color:#333;}
+div{word-break:break-all;word-wrap:break-word}
+ul,ol{list-style:none;}
+img{border:none;vertical-align:top;}
+.f_l{float:left;}
+.f_r{float:right;}
+.c_b{clear:both;}
+.clear{clear:both;height:0;overflow:hidden;font-size:0;}
+.clearfix{clear:both;}
+.clearfix:after{clear:both;content:".";display:block;height:0;line-height:0;visibility:hidden;}
+.dn{display:none;}
+h1{font-size:18px;}
+h2{font-size:16px;}
+h3{font-size:14px;}
+h4,h5,h6{font-size:100%;}
+.f_w_b{font-weight:bold;}
+.f_w_n{font-weight:normal;}
+.gray{color:#999;}
+.t_a_l{text-align:left;}
+.t_a_c{text-align:center;}
+.t_a_r{text-align:right;}
+.t_d_u{text-decoration:underline;}
+.fc_blue{color:#04d;}
+.fc_green{color:green;}
+.fc_red{color:red;}
+.fs_12{font-size:12px;}
+.fs_14{font-size:14px;}
+.fs_26{font-size:26px;}
+a:link,a:visited{color:#3E7EF7;text-decoration:underline;}
+a:hover,a:active{text-decoration:underline;}
+.mb10{margin-bottom:10px;}
+.mb20{margin-bottom:20px;}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.mt_5{margin-top:5px;}
+.w960 {width:960px; margin:0 auto;}
+
+body{background:#F5F5F5}
+
+html{overflow:hidden;}
+.my404{text-align:center; width:930px; position:absolute; background:url(/wzws_img/50x_bg.jpg) no-repeat center top; height:322px;left:50%; margin-left:-465px; top:50%; margin-top:-241px;}
+.my404-content{ line-height:30px; text-align:center; padding-top:200px;font-size:14px; color:#ffffff; text-indent:28px;}
+
+.foot{position:fixed; bottom:0;_position:absolute; width:100%;}
+
+.error_tips{
+  margin-top:50px;
+  font-size:14px;
+  color:#595959;
+  text-align:left;
+  padding-left:170px;
+  margin-bottom:20px;
+  display:none;
+}
+
+.error_reasons{
+ margin-top:20px;
+ background:#ffffff;
+ padding:10px;
+ width:600px;
+ border:1px solid #cccccc;
+}
+
+.error_reasons li{
+  padding-top:8px;
+}
+
+</style>
+</head>
+<body>
+<div class="my404">
+    <div class="my404-content">
+        <span id="host"></span>很遗憾，当前网站处于维护状态，如果您是网站管理员，<a href="#" title="查看具体原因" id="check_reason" onclick="show_reasons();">请点击查看具体原因</a>
+    </div>
+    <div class="error_tips" id="reason_panel">
+    您的网站处于维护状态，可能是由于以下几种原因，请您确认：
+    <br/>
+    <ul class="error_reasons">
+       <li>1.您的网站服务器可能出现宕机，访问不了等故障，请确保网站源站能够正常访问。</li>
+       <li>2.我们的服务器可能因为您的网站机房安装了网站防火墙而被拦截IP，请<a href="http://wangzhan.360.cn/faq?q=2" title="IP列表" target="_blank">点击查看</a>我们的IP列表。</li>
+       <li>3.如仍然不能确定原因，请使用<a href="http://wangzhan.360.cn/guide/domain" title="域名诊断工具" target="_blank">域名诊断工具</a>进行诊断。</li>
+    </ul>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    function show_reasons(){
+       document.getElementById("reason_panel").style.display='block';
+    }
+  
+</script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32745158-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+

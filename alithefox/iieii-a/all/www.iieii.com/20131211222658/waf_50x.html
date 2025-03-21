@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>50x错误</title>
+
+</head>
+
+<body style="background: url('/wzws-waf-cgi/bg.jpg');font-family:'Microsoft Yahei';">
+<div style="width:800px;margin:100px auto 0px;text-align:center;">
+	<img src="/wzws-waf-cgi/icon502.png" border="0">
+	<br>
+
+	<p style="color:#686868;line-height:30px;margin:0px;">当前网站出现问题，请稍候访问<br><span style="font-size:12px;">如果您是站长，请您使用网站卫士 <a id="linkurl" href="http://wangzhan.360.cn/" target="_blank" style="color:#0573e3;">[网站体检]</a> 功能进行检测</p>
+	<div style="border-top:1px dashed #686868;width:700px;margin:35px auto 35px;"></div>
+	<img src="/wzws-waf-cgi/wzblogo.png" border="0">
+</div>
+
+<script>
+var parse_url = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+var url = window.location.href;
+var result = parse_url.exec(url);
+var link = document.getElementById('linkurl');
+link.href = 'http://wangzhan.360.cn/check/index/domain/'+result[3];
+</script>
+
+</body>
+</html>

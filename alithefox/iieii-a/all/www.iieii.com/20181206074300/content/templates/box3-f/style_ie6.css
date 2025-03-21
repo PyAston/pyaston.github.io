@@ -1,0 +1,17 @@
+/*
+ * 自定义外框
+ */
+html, body {height:100%; width:100%; overflow:hidden;}
+#mybody {position:relative; height:100%; width:100%; text-align:center; overflow-x:hidden; overflow-y:scroll; background:url(images/bg.gif);/*屏蔽此背景时边框外侧背景为黑色*/}
+
+/*
+ * 浮动内容
+ */
+#headerbar {position:absolute; margin:0px 0px 0px -503px;}
+#list {position:absolute; margin:0px 0px 0px -498px;}
+#locate {position:absolute; margin:-31px auto auto 223px;}
+/*
+ * 浮动内容.End
+ */
+
+#sidebar .widget {border:1px;}

@@ -1,0 +1,90 @@
+-------------------------
+Version: 3.0.4
+-------------------------
+Command: -u iieii.com -a --keep --reset --workers 4
+-------------------------
+
+2025-03-20 14:04:22
+-------------------------
+!-- Exception: 
+-----> Worker: 3 - Attempt: [1/1] Snapshot ID: [1/4192] - EXCEPTION - EOF occurred in violation of protocol (_ssl.c:997)
+!-- File: C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\ssl.py
+!-- Function: do_handshake
+!-- Line: 1341
+!-- Segment: self._sslobj.do_handshake()
+!-- Description: EOF occurred in violation of protocol (_ssl.c:997)
+-------------------------
+!-- Local Variables:
+    -- self = <ssl.SSLSocket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+    -- block = False
+    -- timeout = None
+-------------------------
+Traceback (most recent call last):
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\site-packages\pywaybackup\archive.py", line 245, in download_loop
+    download_status = download(db, output, snapshot, connection, status_message, no_redirect)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\site-packages\pywaybackup\archive.py", line 309, in download
+    response, response_data, response_status, response_status_message = download_response(connection, encoded_download_url, headers)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\site-packages\pywaybackup\archive.py", line 368, in download_response
+    connection.request("GET", encoded_download_url, headers=headers)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1454, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 512, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1070, in _create
+    self.do_handshake()
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1341, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:997)
+
+2025-03-20 14:04:47
+-------------------------
+!-- Exception: 
+-----> Worker: 4 - Attempt: [1/1] Snapshot ID: [15/4192] - EXCEPTION - EOF occurred in violation of protocol (_ssl.c:997)
+!-- File: C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\ssl.py
+!-- Function: do_handshake
+!-- Line: 1341
+!-- Segment: self._sslobj.do_handshake()
+!-- Description: EOF occurred in violation of protocol (_ssl.c:997)
+-------------------------
+!-- Local Variables:
+    -- self = <ssl.SSLSocket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+    -- block = False
+    -- timeout = None
+-------------------------
+Traceback (most recent call last):
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\site-packages\pywaybackup\archive.py", line 245, in download_loop
+    download_status = download(db, output, snapshot, connection, status_message, no_redirect)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\site-packages\pywaybackup\archive.py", line 309, in download
+    response, response_data, response_status, response_status_message = download_response(connection, encoded_download_url, headers)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\site-packages\pywaybackup\archive.py", line 368, in download_response
+    connection.request("GET", encoded_download_url, headers=headers)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1454, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 512, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1070, in _create
+    self.do_handshake()
+  File "C:\Users\Aston\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1341, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:997)
+
