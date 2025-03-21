@@ -219,7 +219,7 @@ html>body #content .box {float:left;}  /*Mozilla*/
  * footerbar
  */
 #footerbar {width:990px;height:25px; line-height:25px; font-size:11px; color:#666; background:url(images/bg_button.gif); border-top:1px solid #ddd; text-align:center; overflow:hidden;}
-#footerbar a {font-size:12px; color:#333; text-decoration:none;}
+#footerbar a {font-size:12px; color:#c63030; text-decoration:none;}
 #footerbar a:hover {color:#000;}
 #footerbar img {height:12px; margin-top:-2px;}
 
