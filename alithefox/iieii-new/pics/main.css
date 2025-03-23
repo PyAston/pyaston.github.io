@@ -1,0 +1,92 @@
+/*
+设计：Yoniu
+logo字体：心版甜妞简繁
+*/
+body {
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, "PingFangSC-Regular", 'PingFang SC', "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, "WenQuanYi Micro Hei", SimSun, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+#body {
+    width: 100%;
+    max-width: 980px;
+	padding: 0px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#content{background-color: #fff;}
+.logimg{opacity:0.25;-webkit-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
+.forlogtopdiv:hover .logimg{opacity:0;-webkit-transition: all .3s ease-in-out;transition: all .3s ease-in-out;}
+.forlogpic{position:relative;}
+.forloginfo{position:absolute;bottom:10px;left:10px;}
+.forlogtitle{font-size:16px;text-overflow: -o-ellipsis-lastline;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;word-break: break-all;}
+.forlogtitle>a,.forlogtitle>a:hover{color:#fff;text-decoration:none;}
+.forlogicon{margin-top:5px;font-size:13px;color:#fff;}
+.sorticon{display: inline-block;padding:3px 5px;text-decoration:none;margin-right:5px;}
+.sorticon:hover{text-decoration:none;}
+.dateicon{margin-left:5px;display: inline-block;}
+
+#listsort{margin:15px 0;}
+#listsort li{display: inline-block;}
+#hitokoto{color:#aaa;font-size:13px;}
+
+.article{margin: 0 70px;padding:20px 0;border-top: 1px solid #eee;}
+.right-text>h2,.article>h2{margin: 0;font-weight: 100;}
+.right-text>h2 a,.right-text>h2 a:hover,.article>h2 a,.article>h2 a:hover{text-decoration:none;}
+.readmore{display:none;}
+.articleicon,.twinfoicon{color: rgba(0, 0, 0, .44);font-size:13px;}
+.articlesort{margin-right:3px;display: inline-block;}
+.articlesort a,.articlesort a:hover{color: rgba(0, 0, 0, .44);text-decoration:none;}
+.articletime{margin-left:3px;display: inline-block;}
+.articletext{margin: 20px 10px 0;}
+.articletext img{display: block;width: 100%;height: auto;}
+.left-img{padding: 0 10px 0;}
+.left-img-show {overflow: hidden;max-height: 258px;}
+#pagenavi{margin: 0 70px;}
+.twauthor a,.twauthor a:hover{text-decoration:none;}
+.articlebloginfo{border-top:1px solid #eee;border-bottom:1px solid #eee;}
+.articleblogtag a,.articleblogtag a:hover{display: inline-block;padding:3px 5px;text-decoration:none;}
+
+.vcode,.commenttextarea{position:relative;}
+.vcode>img{position:absolute;top:22px;left:8px;}
+.commenttextarea .commentbtn{position:absolute;bottom:20px;right:20px;}
+.commenttextarea .cancel-reply{position: absolute;bottom: 20px;right: 120px;}
+.vcode>input{padding-left: 75px;}
+.articlecomment{border:1px solid #eee;}
+.list-title:before {display: block;content: '';border-top: 1px solid #e7e7e7;position: relative;top: 8px;z-index: 1;}
+.list-title span {display: inline-block;padding: 0 30px;background: #fff;position: relative;z-index: 2;font-weight: 400;}
+
+#comment-list{margin: 5px 10px;}
+#comment-list ol{margin: 0 auto;}
+#comment-list>ol{padding: 0px;margin: 0px 0;}
+#comment-list .comment{padding-top:20px;}
+#comment-list .comment-level-odd{margin-left: 10px;padding-top: 10px;}
+#comment-list>.comment-list>.comment .comment-list-body{margin-left:50px;padding-bottom:10px;border-bottom:1px solid #ddd;}
+#comment-list>.comment-list>.comment .comment-children .comment-list-body{margin-left:40px;}
+#comment-list>.comment-list>.comment .comment-children img{width:30px;height:30px;padding-top: 5px;}
+#comment-list>.comment-list>.comment .comment-author-box{font-size:15px;font-weight: 700;}
+#comment-list>.comment-list>.comment .comment-author-box a{color: #333;text-decoration: none;}
+#comment-list>.comment-list>.comment .comment-author-box a:hover{color: #333;text-decoration: none;}
+.comment-content-main .comment-reply a{color: #aaa;text-decoration: none;}
+.comment-content-main .comment-reply a:hover{color: #aaa;text-decoration: none;}
+.comment-content p{margin: 10px 0;font-size:15px;}
+.comment-content-main .comment-down-list{font-size:12px;color:#aaa;}
+.comment-content-main .comment-time{margin:0 10px 0 0;}
+#comment-list>.comment-list>.comment .comment-children img{width:30px;height:30px;}
+#comment-list>.comment-list>.comment .comment-children .comment-author-box{float: left;padding-right: 10px;}
+.page-navigator>span{display: inline-block;padding:3px 10px;background-color:#fff;}
+.page-navigator>a,.page-navigator>a:hover{display: inline-block;padding:3px 10px;text-decoration: none;color: #fff;}
+
+@media (max-width: 980px){
+ #body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+ }
+.forlogtitle{font-size:15px;}
+.article{margin: 0 10px;}
+#pagenavi{margin: 0 10px;}
+.articletext{margin: 10px 0 0;}
+.left-img{padding: 0;}
+.right-text>h2,.right-text>.articleicon{text-align: center!important;}
+.right-text>h2{padding-top:10px;text-align: center!important;}
+}
