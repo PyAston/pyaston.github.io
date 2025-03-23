@@ -12,6 +12,9 @@ function togglePlayPause() {
       playpause.innerHTML = '<i class="mdui-icon material-icons">&#xe037;</i>';
       audio.pause();
    }
+
+   // 确保事件不会干扰其他元素
+   event.stopPropagation();
 }
 function setVolume() {
    audio.volume = volume.value;
@@ -63,21 +66,31 @@ function completeload() {
 	});
 }
 completeload();
-var inst = new mdui.Fab('#fab');
-inst.hide();
-$(window).scroll(function() {
-	if ($(this).scrollTop() > 0) {
-		inst.show();
-	} else {
-		inst.hide();
-	}
+
+//var inst = new mdui.Fab('#fab');
+//inst.show();
+/*
+document.addEventListener('DOMContentLoaded', function () {
+    var inst = new mdui.Fab('#fab');
+    inst.show();
 });
+
+$(window).on('scroll', function() {
+    if ($(this).scrollTop() > 0) {
+        inst.show();
+    } else {
+        inst.hide();
+    }
+});
+
+
 $('#fab').click(function() {
 	$('body,html').animate({
 		scrollTop: 0
 	}, 500);
 		return false
 })
+*/
 
 var ajaxcontent = 'content';
 var ajaxsearch_class = '';
