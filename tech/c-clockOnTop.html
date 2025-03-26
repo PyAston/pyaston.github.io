@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>批处理&C语言版简易桌面时钟 &#8211; Aston & BG5JKH's website</title>
+    <meta name="description" content="Simple Jekyll theme for your blog by Taylan Tatlı">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="https://bg5jkh.com/tech/c-clockOnTop.html">
+        <!-- Twitter Cards -->
+    <meta name="twitter:title" content="批处理&C语言版简易桌面时钟">
+    
+    <meta name="twitter:site" content="@AstonPython">
+    <meta name="twitter:creator" content="@AstonPython">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://bg5jkh.com/assets/img/Logo.svg">
+    <!-- Open Graph -->
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="批处理&C语言版简易桌面时钟">
+    
+    <meta property="og:url" content="https://bg5jkh.com/tech/c-clockOnTop.html">
+    <meta property="og:site_name" content="Aston & BG5JKH's website">
+    <meta property="og:image" content="/assets/img/Logo.svg">
+
+    
+    
+    <!-- Handheld -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://bg5jkh.com/assets/img/Logo.svg">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://bg5jkh.com/assets/img/Logo.svg">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://bg5jkh.com/assets/img/Logo.svg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://bg5jkh.com/assets/img/Logo.svg">
+    <link rel="icon" type="image/png" href="https://bg5jkh.com/assets/img/Logo.svg">
+    <link rel="shortcut icon" href="https://bg5jkh.com/assets/img/Logo.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://bg5jkh.com/assets/css/main.css">
+</head>
+
+
+<body>
+        <nav class="nav">
+        <ul class="list">
+            
+				    
+				    <li class="item"><a class="link" href="https://bg5jkh.com/">主页</a></li>
+				
+				    
+				    <li class="item"><a class="link" href="https://bg5jkh.com/blog/">部落格</a></li>
+				
+				    
+				    <li class="item"><a class="link" href="https://bg5jkh.com/ham/">电友天地</a></li>
+				
+				    
+				    <li class="item"><a class="link" href="https://bg5jkh.com/tech/">科技求索</a></li>
+				
+				    
+				    <li class="item"><a class="link" href="https://bg5jkh.com/philately/">集邮花园</a></li>
+				
+				    
+				    <li class="item"><a class="link" href="https://bg5jkh.com/alithefox/">Ali the Fox</a></li>
+				
+				    
+				    <li class="item"><a class="link" href="https://bg5jkh.com/about/">关于本站</a></li>
+				
+				    
+				    <li class="item"><a class="link" href="https://bg5jkh.com/en/">English</a></li>
+				
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="title">
+            <h1>批处理&amp;C语言版简易桌面时钟</h1>
+            <h4>2025年3月26日</h4>
+        </div>
+        <div class="article">
+            <section id="table-of-contents" class="toc">
+  <header>
+    <h3>
+<i class="fa fa-book"></i> 目录 </h3>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF" id="markdown-toc-问题背景">问题背景</a></li>
+  <li><a href="#%E6%89%B9%E5%A4%84%E7%90%86%E7%89%88" id="markdown-toc-批处理版">批处理版</a></li>
+  <li><a href="#c%E8%AF%AD%E8%A8%80%E7%89%88" id="markdown-toc-c语言版">C语言版</a></li>
+  <li><a href="#%E5%90%8E%E8%AE%B0" id="markdown-toc-后记">后记</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<h2 id="问题背景">问题背景</h2>
+
+<p>  我的笔记本是16寸，为了让屏幕更大而隐藏了任务栏，这导致我看时间不方便。平常有一块外接屏一起使用，加上Windows小组件已经消失，特此制作一个桌面时钟。功能如下：</p>
+
+<ul>
+  <li>显示日期时间</li>
+  <li>炫酷闪眼RGB</li>
+  <li>窗口置顶</li>
+</ul>
+
+<p>普通版：</p>
+
+<p><img src="/assets/img/tech/c-clockOnTop/normal.gif#pic_center" alt="下载我即可体验"></p>
+
+<p>gif 信息：</p>
+
+<p>MD5: 4963C964AD15ADD53CD4A438C87D548A</p>
+
+<p>SHA1: A6D6F1170699A7E63DA92C290406793A45B5E201</p>
+
+<p>炫酷RGB版：
+<img src="/assets/img/tech/c-clockOnTop/color.gif#pic_center" alt="在这里插入图片描述"></p>
+
+<hr>
+
+<h2 id="批处理版">批处理版</h2>
+
+<p>    批处理版本身不支持窗口置顶与隐藏光标，这里需要借助两个第三方。但是一个脚本带两个第三方很难受，像NTBootAutoFix打包成自解压又没有必要，所以比较累赘，但总归实现比较简单。后续C语言的版本简单许多。</p>
+
+<p>代码：</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@echo off
+title clockOnTop
+rem 不要窗口置顶就删去call windowontop.exe clockOnTop
+call windowontop.exe clockOnTop
+setlocal enabledelayedexpansion
+mode con <span class="nv">cols</span><span class="o">=</span>26 <span class="nv">lines</span><span class="o">=</span>4
+CurS.exe /crv 0
+<span class="nb">set </span><span class="nv">current</span><span class="o">=</span>%time:~7,1%
+
+:loop
+CurS.exe /pos 6 1
+<span class="nb">echo</span> %date:~0,4%年%date:~5,2%月%date:~8,2%日
+CurS.exe /pos 9 2
+<span class="nb">echo</span> %time:~0,8%
+rem 加入颜色变化删去下面的rem
+rem call :colorchange
+ping 127.0.0.1 /n 1 <span class="o">&gt;</span>nul
+goto loop
+
+:colorfunction
+<span class="nb">set </span><span class="nv">str</span><span class="o">=</span>0123456789ABCDEF
+<span class="nb">set</span> /a <span class="nv">ca</span><span class="o">=</span>%random%%%16
+<span class="nb">set</span> /a <span class="nv">cb</span><span class="o">=</span>%random%%%16
+<span class="nb">set </span><span class="nv">ca</span><span class="o">=!</span>str:~%ca%,1!
+<span class="nb">set </span><span class="nv">cb</span><span class="o">=!</span>str:~%cb%,1!
+color %ca%%cb%
+goto :eof
+
+:colorchange
+<span class="nb">set </span><span class="nv">last</span><span class="o">=</span>%current%
+<span class="nb">set </span><span class="nv">current</span><span class="o">=</span>%time:~7,1%
+<span class="k">if</span> %current% NEQ %last% <span class="o">(</span>call :colorfunction<span class="o">)</span>
+goto :eof
+</code></pre></div></div>
+
+<p>两个第三方一个是curs.exe，隐藏光标，另一个是windowontop.exe，窗口置顶。
+下载链接：直接保存开头第一个（不是炫彩RGB）gif，图种。哈希已经在上面给出。</p>
+
+<hr>
+
+<h2 id="c语言版">C语言版</h2>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp">
+</span>
+<span class="c1">// 设置窗口置顶</span>
+<span class="kt">void</span> <span class="nf">setWindowOnTop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">HWND</span> <span class="n">consoleWindow</span> <span class="o">=</span> <span class="n">FindWindow</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">"ClockOnTop"</span><span class="p">);</span>  <span class="c1">// 查找标题为 ClockOnTop 的窗口</span>
+    <span class="n">SetWindowPos</span><span class="p">(</span><span class="n">consoleWindow</span><span class="p">,</span> <span class="n">HWND_TOPMOST</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SWP_NOMOVE</span> <span class="o">|</span> <span class="n">SWP_NOSIZE</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// 设置控制台光标位置</span>
+<span class="kt">void</span> <span class="nf">setCursorPosition</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">HANDLE</span> <span class="n">hConsole</span> <span class="o">=</span> <span class="n">GetStdHandle</span><span class="p">(</span><span class="n">STD_OUTPUT_HANDLE</span><span class="p">);</span>
+    <span class="n">COORD</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">};</span>
+    <span class="n">SetConsoleCursorPosition</span><span class="p">(</span><span class="n">hConsole</span><span class="p">,</span> <span class="n">pos</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// 隐藏光标</span>
+<span class="kt">void</span> <span class="nf">hideCursor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">HANDLE</span> <span class="n">hConsole</span> <span class="o">=</span> <span class="n">GetStdHandle</span><span class="p">(</span><span class="n">STD_OUTPUT_HANDLE</span><span class="p">);</span>
+    <span class="n">CONSOLE_CURSOR_INFO</span> <span class="n">cursorInfo</span><span class="p">;</span>
+    <span class="n">GetConsoleCursorInfo</span><span class="p">(</span><span class="n">hConsole</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cursorInfo</span><span class="p">);</span>
+    <span class="n">cursorInfo</span><span class="p">.</span><span class="n">bVisible</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span>
+    <span class="n">SetConsoleCursorInfo</span><span class="p">(</span><span class="n">hConsole</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cursorInfo</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// 获取控制台缓冲区大小</span>
+<span class="n">COORD</span> <span class="nf">getConsoleSize</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">CONSOLE_SCREEN_BUFFER_INFO</span> <span class="n">csbi</span><span class="p">;</span>
+    <span class="n">HANDLE</span> <span class="n">hConsole</span> <span class="o">=</span> <span class="n">GetStdHandle</span><span class="p">(</span><span class="n">STD_OUTPUT_HANDLE</span><span class="p">);</span>
+    <span class="n">GetConsoleScreenBufferInfo</span><span class="p">(</span><span class="n">hConsole</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">csbi</span><span class="p">);</span>
+    <span class="n">COORD</span> <span class="n">size</span> <span class="o">=</span> <span class="p">{</span><span class="n">csbi</span><span class="p">.</span><span class="n">dwSize</span><span class="p">.</span><span class="n">X</span><span class="p">,</span> <span class="n">csbi</span><span class="p">.</span><span class="n">dwSize</span><span class="p">.</span><span class="n">Y</span><span class="p">};</span>
+    <span class="k">return</span> <span class="n">size</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 更改整个控制台背景色</span>
+<span class="kt">void</span> <span class="nf">changeConsoleBackground</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">HANDLE</span> <span class="n">hConsole</span> <span class="o">=</span> <span class="n">GetStdHandle</span><span class="p">(</span><span class="n">STD_OUTPUT_HANDLE</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">bg</span><span class="p">,</span> <span class="n">fg</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="c1">// 默认白色文字</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="n">bg</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">16</span><span class="p">;</span> <span class="c1">// 0-15 颜色</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">bg</span> <span class="o">==</span> <span class="n">fg</span><span class="p">);</span>  <span class="c1">// 确保前景色和背景色不同</span>
+
+    <span class="kt">int</span> <span class="n">colorCode</span> <span class="o">=</span> <span class="p">(</span><span class="n">bg</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">|</span> <span class="n">fg</span><span class="p">;</span>  <span class="c1">// 组合背景色和前景色</span>
+
+    <span class="c1">// 设置整个控制台的背景色</span>
+    <span class="n">COORD</span> <span class="n">consoleSize</span> <span class="o">=</span> <span class="n">getConsoleSize</span><span class="p">();</span>
+    <span class="n">DWORD</span> <span class="n">cells</span> <span class="o">=</span> <span class="n">consoleSize</span><span class="p">.</span><span class="n">X</span> <span class="o">*</span> <span class="n">consoleSize</span><span class="p">.</span><span class="n">Y</span><span class="p">;</span>
+    <span class="n">DWORD</span> <span class="n">written</span><span class="p">;</span>
+    <span class="n">FillConsoleOutputAttribute</span><span class="p">(</span><span class="n">hConsole</span><span class="p">,</span> <span class="n">colorCode</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="p">(</span><span class="n">COORD</span><span class="p">){</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span> <span class="o">&amp;</span><span class="n">written</span><span class="p">);</span>
+    <span class="n">FillConsoleOutputCharacter</span><span class="p">(</span><span class="n">hConsole</span><span class="p">,</span> <span class="sc">' '</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="p">(</span><span class="n">COORD</span><span class="p">){</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span> <span class="o">&amp;</span><span class="n">written</span><span class="p">);</span>
+    
+    <span class="n">SetConsoleTextAttribute</span><span class="p">(</span><span class="n">hConsole</span><span class="p">,</span> <span class="n">colorCode</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">"title ClockOnTop"</span><span class="p">);</span>  <span class="c1">// 设置窗口标题</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">"mode con cols=26 lines=4"</span><span class="p">);</span> <span class="c1">// 设置窗口大小</span>
+    <span class="n">hideCursor</span><span class="p">();</span>  <span class="c1">// 隐藏光标</span>
+    <span class="n">setWindowOnTop</span><span class="p">();</span>  <span class="c1">// 让窗口置顶</span>
+
+    <span class="kt">time_t</span> <span class="n">lastUpdate</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 获取当前时间</span>
+        <span class="kt">time_t</span> <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">now</span> <span class="o">==</span> <span class="n">lastUpdate</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">continue</span><span class="p">;</span> <span class="c1">// 如果秒没变，跳过循环</span>
+        <span class="p">}</span>
+
+        <span class="n">lastUpdate</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
+        <span class="k">struct</span> <span class="n">tm</span> <span class="o">*</span><span class="n">tm_info</span> <span class="o">=</span> <span class="n">localtime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">now</span><span class="p">);</span>
+
+        <span class="c1">// 变换整个控制台背景色</span>
+        <span class="n">changeConsoleBackground</span><span class="p">();</span>
+
+        <span class="c1">// 输出日期</span>
+        <span class="n">setCursorPosition</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%04d年%02d月%02d日</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">tm_info</span><span class="o">-&gt;</span><span class="n">tm_year</span> <span class="o">+</span> <span class="mi">1900</span><span class="p">,</span> <span class="n">tm_info</span><span class="o">-&gt;</span><span class="n">tm_mon</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tm_info</span><span class="o">-&gt;</span><span class="n">tm_mday</span><span class="p">);</span>
+
+        <span class="c1">// 输出时间</span>
+        <span class="n">setCursorPosition</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%02d:%02d:%02d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">tm_info</span><span class="o">-&gt;</span><span class="n">tm_hour</span><span class="p">,</span> <span class="n">tm_info</span><span class="o">-&gt;</span><span class="n">tm_min</span><span class="p">,</span> <span class="n">tm_info</span><span class="o">-&gt;</span><span class="n">tm_sec</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="后记">后记</h2>
+
+<p>  人还是要多学习。</p>
+
+<p>  2025年3月26日</p>
+
+        </div>
+    </div>
+        <div class="footer">
+        Aston &amp; BG5JKH's website © 2025 <!--<a href="https://bg5jkh.com/feed.xml" target="_blank"><i class="fa fa-fw fa-feed"></i></a>-->
+    </div>
+
+    <script src="https://bg5jkh.com/assets/js/jquery-1.12.2.min.js"></script>
+<script src="https://bg5jkh.com/assets/js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.goup({
+        trigger: 500,
+        bottomOffset: 10,
+        locationOffset: 20,
+        containerRadius: 0,
+        containerColor: '#fff',
+        arrowColor: '#000',
+        goupSpeed: 'normal'
+    });
+});
+</script>
+
+
+</body>
+</html>
