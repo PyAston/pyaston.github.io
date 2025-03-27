@@ -24,7 +24,7 @@
 			<div class="mdui-toolbar mdui-color-theme">
 				<a href="/alithefox/iiieii-new/" title="阿狸的999封情书正版官网-优秀情书每日更新，百万网友用心浇灌。" class="mdui-typo-headline"><img
 						src="/alithefox/iieii-new/pics/logo.png"></a>
-						<p>收集情书 883 篇</p>
+						<p>献给依旧相信童话的人，献给依旧满怀童真的你。</p>
 				<div class="mdui-toolbar-spacer"></div>
 
 				<audio id="ting" src="http://music.163.com/song/media/outer/url?id=461313621.mp3" style="display: none;"></audio>
@@ -70,49 +70,49 @@
 
 		<div id="content">
 			<div class="mdui-container-fluid">
-				<div id="forlog" class="mdui-row mdui-row-gapless">
-				</div>
+				<div id="forlog" class="mdui-row mdui-row-gapless"></div>
 			</div>
 
 			<div id="contentleft">
 				<div id="hitokoto" class="mdui-p-y-2 mdui-p-x-2 mdui-text-center"></div>
+				<div class="article">	
 
-                <div class="article">
-<h2 class="mdui-text-center">
-<a class="mdui-text-color-theme" href="http://www.iieii.com/post-3.html">第三封</a>
-</h2>
-<div class="articleicon mdui-text-center mdui-m-t-1">
-<div class="articlesort"> <a href="/alithefox/iieii-new">阿狸的999封情书</a></div>
-<div class="articletime">2012-6-3</div>
-</div>
-<div class="articletext mdui-typo">
-<p>
-							    Your name is such ordinary but it affects my mood all round.<br/>
-							    你那么平凡的名字；却影响我那么多的情绪。
-						</p>
-<p>
-<a href="https://img10.360buyimg.com/ddimg/jfs/t1/280366/18/7452/32316/67df8f21F0eb775ed/a4ff47123d75a387.jpg" id="ematt:72" target="_blank"><img alt="第三封.jpg" border="0" height="298" src="https://img10.360buyimg.com/ddimg/jfs/t1/280366/18/7452/32316/67df8f21F0eb775ed/a4ff47123d75a387.jpg" title="点击查看原图" width="510"/></a> 
-						</p>
-</div>
-<div style="clear:both;"></div>
-</div>
+				<div class="card-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 6px;">
 
-				<div id="guide" class="mdui-row mdui-typo">
-					<!-- 上一页按钮 -->
-					<div class="mdui-col-xs-6 mdui-text-left">
-						<a href="/alithefox/iieii-new/article/post-2.html" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">
-							<i class="mdui-icon material-icons">navigate_before</i>第二封
-						</a>
-					</div>
-				
-					<!-- 下一页按钮 -->
-					<div class="mdui-col-xs-6 mdui-text-right">
-						<a href="/alithefox/iieii-new/article/post-4.html" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">
-							第四封<i class="mdui-icon material-icons">navigate_next</i>
-						</a>
-					</div>
+                    {cards}
+					  
+				</div>
+			</div>
+
+			<div id="guide" class="mdui-row mdui-typo">
+				<!-- 上一页按钮 -->
+				<div class="mdui-col-xs-4 mdui-text-left">
+					<a href="{last_page}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">
+						<i class="mdui-icon material-icons">navigate_before</i>上一页
+					</a>
 				</div>
 
+				<div class="mdui-col-xs-4 mdui-text-center">
+                    <div class="mdui-btn-group">
+                        <a href="{page_link_1}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{page_num_1}</a>
+                        <a href="{page_link_2}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{page_num_2}</a>
+                        <a href="{page_link_3}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{page_num_3}</a>
+                        <a href="{page_link_4}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{page_num_4}</a>
+                        <a href="{page_link_5}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{page_num_5}</a>
+                        <a href="{page_link_6}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{page_num_6}</a>
+						<a href="{page_link_7}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{page_num_7}</a>
+                    </div>
+                </div>
+                
+
+				<!-- 下一页按钮 -->
+				<div class="mdui-col-xs-4 mdui-text-right">
+					<a href="{next_page}" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">
+						下一页<i class="mdui-icon material-icons">navigate_next</i>
+					</a>
+				</div>
+			</div>
+				
 			</div><!-- end #contentleft-->
 		</div><!--end #content-->
 
@@ -120,7 +120,6 @@
 			<i class="mdui-icon material-icons"></i>
 		  </button>
 		
-		  
 		  <script>
 			// 获取浮动按钮
 			var fab = document.getElementById('fab');
@@ -181,16 +180,3 @@
 </body>
 
 </html>
-
-<div class="mdui-card mdui-shadow-3" style="height: 180px; border: 1px solid #d8d8d8;">
-	<div class="mdui-card-content" style="padding: 0px; height: 23px;">
-	  <a href="{post_link}" class="mdui-typo-title" style="font-weight: bold; text-align: left; display: block; font-size: 12px;">
-		{post_title}
-	  </a>
-	</div>
-	<div class="mdui-card-media" style="height: 135px; overflow: hidden;">
-	  <a href="{post_link}">
-		<img src="{pic_url}" alt="分享图片" style="width: 180px; height: 163px; object-fit: cover;" />
-	  </a>
-	</div>
-  </div>
