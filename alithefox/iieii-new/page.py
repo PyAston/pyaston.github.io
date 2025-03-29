@@ -45,8 +45,42 @@ def generate_card_html(post_link, post_img, post_title):
     '''
     return card_html
 
+import os
+
+# 生成分页链接数据
+def generate_pagination_links(current_page, total_pages):
+    max_buttons = 7  # 最多显示 7 个分页按钮
+    pagination_data = {}  # 存储 {page_num_x: 数字, page_link_x: 链接}
+
+    # 计算分页范围
+    if total_pages <= max_buttons:
+        start_page = 1
+        end_page = total_pages
+    else:
+        if current_page <= 4:
+            start_page = 1
+            end_page = max_buttons
+        elif current_page >= total_pages - 3:
+            start_page = total_pages - 6
+            end_page = total_pages
+        else:
+            start_page = current_page - 3
+            end_page = current_page + 3
+
+    # 填充 page_num_x 和 page_link_x
+    for i, page in enumerate(range(start_page, end_page + 1), start=1):
+        pagination_data[f"page_num_{i}"] = str(page)
+        pagination_data[f"page_link_{i}"] = f"page-{page}.html"
+
+    # 确保所有 7 个占位符都有值（不足 7 个时补空字符串）
+    for i in range(1, max_buttons + 1):
+        pagination_data.setdefault(f"page_num_{i}", "")
+        pagination_data.setdefault(f"page_link_{i}", "")
+
+    return pagination_data
+
 # 生成分页文件HTML
-def generate_page_file(page_num, card_list, page_links, total_pages):
+def generate_page_file(page_num, card_list, total_pages):
     # 读取模板文件
     with open('pagemodel.html', 'r', encoding='utf-8') as template_file:
         template = template_file.read()
@@ -54,69 +88,67 @@ def generate_page_file(page_num, card_list, page_links, total_pages):
     # 生成卡片部分
     cards_html = ''.join(card_list)
 
-    # 生成分页链接部分
-    pagination_html = f'''
-    <div class="pagination">
-        {page_links}
-    </div>
-    '''
-
     # 生成上一页和下一页链接
-    last_page = f"page-{page_num - 1}.html" if page_num > 1 else "#"
-    next_page = f"page-{page_num + 1}.html" if page_num < total_pages else "#"
+    last_page = f"/alithefox/iieii-new/page/page-{page_num - 1}.html" if page_num > 1 else "#"
+    next_page = f"/alithefox/iieii-new/page/page-{page_num + 1}.html" if page_num < total_pages else "#"
+
+    # 获取正确的分页数据
+    pagination_data = generate_pagination_links(page_num, total_pages)
 
     # 替换模板中的占位符
     final_html = template.replace("{cards}", cards_html)
-    final_html = final_html.replace("{pagination}", pagination_html)
-    
-    # 填充 {page_link_x} 和 {page_num_x} 占位符
-    for i in range(1, total_pages + 1):
-        final_html = final_html.replace(f'{{page_link_{i}}}', f'page-{i}.html')
-        final_html = final_html.replace(f'{{page_num_{i}}}', str(i))
+
+    # 填充 `{page_link_x}` 和 `{page_num_x}`
+    for key, value in pagination_data.items():
+        final_html = final_html.replace(f"{{{key}}}", value)
 
     # 替换上一页和下一页链接
     final_html = final_html.replace("{last_page}", last_page)
     final_html = final_html.replace("{next_page}", next_page)
 
-    # 输出生成的HTML
-    with open(os.path.join(page_dir, f'page-{page_num}.html'), 'w', encoding='utf-8') as output_file:
+    # 输出生成的 HTML
+    output_path = os.path.join("page", f'page-{page_num}.html')  # 确保 `page/` 目录存在
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    with open(output_path, 'w', encoding='utf-8') as output_file:
         output_file.write(final_html)
 
-    print(f"Page {page_num} generated with pagination links: {page_links}")
+    print(f"✅ Page {page_num} generated with pagination links.")
+
 
 
 # 生成分页链接（根据当前页动态调整页码）
+# 生成分页链接数据
 def generate_pagination_links(current_page, total_pages):
-    page_links = []
-    # 设置显示页码的范围，前后各显示3页
-    start_page = max(1, current_page - 3)  # 起始页码
-    end_page = min(total_pages, current_page + 3)  # 结束页码
+    max_buttons = 7  # 最多显示 7 个分页按钮
+    pagination_data = {}  # 存储 {page_num_x: 数字, page_link_x: 链接}
 
-    # 如果起始页小于1，则将结束页码的范围推向前面
-    if start_page > 1:
-        page_links.append(f'<a href="page-1.html" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">1</a>')
-
-    # 显示前置省略页码
-    if start_page > 2:
-        page_links.append('...')
-
-    # 添加页码链接
-    for i in range(start_page, end_page + 1):
-        if i == current_page:
-            page_links.append(f'<a href="page-{i}.html" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme mdui-color-theme-accent">{i}</a>')
+    # 计算分页范围
+    if total_pages <= max_buttons:
+        start_page = 1
+        end_page = total_pages
+    else:
+        if current_page <= 4:
+            start_page = 1
+            end_page = max_buttons
+        elif current_page >= total_pages - 3:
+            start_page = total_pages - 6
+            end_page = total_pages
         else:
-            page_links.append(f'<a href="page-{i}.html" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{i}</a>')
+            start_page = current_page - 3
+            end_page = current_page + 3
 
-    # 显示后置省略页码
-    if end_page < total_pages - 1:
-        page_links.append('...')
+    # 填充 page_num_x 和 page_link_x
+    for i, page in enumerate(range(start_page, end_page + 1), start=1):
+        pagination_data[f"page_num_{i}"] = str(page)
+        pagination_data[f"page_link_{i}"] = f"page-{page}.html"
 
-    # 如果结束页大于总页数，则显示总页数
-    if end_page < total_pages:
-        page_links.append(f'<a href="page-{total_pages}.html" class="mdui-btn mdui-btn-dense mdui-ripple mdui-color-theme">{total_pages}</a>')
+    # 确保所有 7 个占位符都有值（不足 7 个时补空字符串）
+    for i in range(1, max_buttons + 1):
+        pagination_data.setdefault(f"page_num_{i}", "")
+        pagination_data.setdefault(f"page_link_{i}", "")
 
-    return ' | '.join(page_links)
-
+    return pagination_data
 
 # 主程序：读取文章文件并生成分页
 def main():
@@ -141,7 +173,7 @@ def main():
         page_links = generate_pagination_links(page_num, total_pages)
 
         # 生成并保存分页HTML文件，传入 total_pages 参数
-        generate_page_file(page_num, card_list, page_links, total_pages)
+        generate_page_file(page_num, card_list, total_pages)
 
         print(f"Page {page_num} generated with pagination links: {page_links}")
 
