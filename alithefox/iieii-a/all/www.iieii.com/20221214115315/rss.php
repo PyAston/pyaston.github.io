@@ -28,7 +28,7 @@
 	【茜茜手绘】阿狸的999封情书第八封
 </p>
 <p>
-	<img alt="" src="http://ww2.sinaimg.cn/large/9b9de81bgw1f67c8t4lwhj20b40drgmp.jpg" /> 
+	<img alt="" src="http://ww2.sinaimg.cn/large/9b9de81bgw1f67c8t4lwhj20b40drgmp.jpg"> 
 </p>]]></description>
 	<pubDate>Sat, 30 Jul 2016 00:00:26 +0000</pubDate>
 	<author>阿狸</author>
@@ -2905,21 +2905,6 @@ QQ：15220079909<br />
 	<pubDate>Sun, 04 Jan 2015 00:00:37 +0000</pubDate>
 	<author>阿狸</author>
 	<guid>http://www.iieii.com/post-581.html</guid>
-
-</item>
-<item>
-	<title>1</title>
-	<link>http://www.iieii.com/post-786.html</link>
-	<description><![CDATA[<p>
-	&lt;script type="text/javascript" src="<a href="http://pvote.a.mvote.net/ijs/a5678b3d-b99a-a00c-2d3f-5afdb2877dd6.js?mvote_w=610&amp;mvote_h=1268&amp;type=vote&quot;></script">http://pvote.a.mvote.net/ijs/a5678b3d-b99a-a00c-2d3f-5afdb2877dd6.js?mvote_w=610&amp;mvote_h=1268&amp;type=vote"&gt;&lt;/script</a>&gt;
-</p>
-<p>
-	&nbsp;
-</p>
-<script type="text/javascript" src="http://pvote.a.mvote.net/ijs/a5678b3d-b99a-a00c-2d3f-5afdb2877dd6.js?mvote_w=610&mvote_h=1268&type=vote"></script>]]></description>
-	<pubDate>Sat, 03 Jan 2015 07:35:19 +0000</pubDate>
-	<author>阿狸</author>
-	<guid>http://www.iieii.com/post-786.html</guid>
 
 </item>
 <item>

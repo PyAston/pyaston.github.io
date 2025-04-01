@@ -14,7 +14,7 @@ with open("replace.txt", "r", encoding="utf-8") as f:
 html_dir = "artical"
 
 for filename in os.listdir(html_dir):
-    if filename.endswith(".html"):
+    if filename.endswith(".xml"):
         html_path = os.path.join(html_dir, filename)
         
         with open(html_path, "r", encoding="utf-8") as f:

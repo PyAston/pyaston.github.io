@@ -10,10 +10,10 @@
 	<title>第七百三十五封</title>
 	<link>http://www.iieii.com/post-799.html</link>
 	<description><![CDATA[<p>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我害怕你对我生气，怕你讨厌我了，怕你不爱我了，请你不要<a id="ematt:42" href="http://www.iieii.com/content/uploadfile/201811/18441542553569.jpg" target="_blank"></a>这样，我无法承受这样的打击，亲爱的，好吗？
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我害怕你对我生气，怕你讨厌我了，怕你不爱我了，请你不要<a id="ematt:42" href="/assets/img/Logo.svg" target="_blank"></a>这样，我无法承受这样的打击，亲爱的，好吗？
 </p>
 <p>
-	<a id="ematt:42" href="http://www.iieii.com/content/uploadfile/201811/18441542553569.jpg" target="_blank"><img title="点击查看原图" border="0" alt="阿狸情书.jpg" src="http://www.iieii.com/content/uploadfile/201811/thum-18441542553569.jpg" width="420" height="263" /></a>
+	<a id="ematt:42" href="/assets/img/Logo.svg" target="_blank"><img title="点击查看原图" border="0" alt="阿狸情书.jpg" src="/assets/img/Logo.svg" width="420" height="263" /></a>
 </p>
 </a>]]></description>
 	<pubDate>Mon, 19 Nov 2018 00:00:34 +0000</pubDate>
