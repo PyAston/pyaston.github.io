@@ -1,0 +1,69 @@
+﻿// Copyright (c) Microsoft Corporation.  All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information.
+.Colors(@theme) {
+    .colorDefinitions(@theme);
+
+    @splitViewCommandRest: transparent;
+    @splitViewCommandHover: @listHover;
+    @splitViewCommandPress: @listPress;
+
+    .win-splitviewcommand-button {
+        background-color: @splitViewCommandRest;
+        color: @baseHigh;
+
+        &.win-pressed {
+            background-color: @splitViewCommandPress;
+        }
+    }
+
+    .win-splitviewcommand-button.win-keyboard:focus::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 1px dotted @baseHigh;
+    }
+}
+.ColorsHover(@theme) {
+    .colorDefinitions(@theme);
+
+    .win-splitviewcommand-button:hover {
+        background-color: @splitViewCommandHover;
+
+        &.win-pressed {
+            background-color: @splitViewCommandPress;
+        }
+    }
+}
+
+@media (-ms-high-contrast) {
+    /*
+        SplitViewCommand colors.
+    */
+    .win-splitviewcommand-button {
+        background-color: ButtonFace;
+        color: ButtonText;
+    }
+    .win-splitviewcommand-button:after {
+        position: absolute;
+        top: 0;
+        left:0;
+        border: 2px solid ButtonText;
+        content: "";
+        width: ~"calc(100% - 3px)";
+        height: ~"calc(100% - 3px)";
+        pointer-events: none;
+    }
+    html.win-hoverable .win-splitviewcommand-button:hover {
+        background-color: Highlight;
+        color: HighlightText;
+    }
+    .win-splitviewcommand-button.win-pressed,
+    html.win-hoverable .win-splitviewcommand-button.win-pressed:hover {
+        background-color: ButtonText;
+        color: ButtonFace;
+    }
+}

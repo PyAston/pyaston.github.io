@@ -1,0 +1,198 @@
+// Copyright (c) Microsoft Corporation.  All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information.
+
+.win-commandingsurface {
+    outline: none;
+    min-width: 32px; /* enough to fit the overflowbutton */
+    position: relative;
+
+    &.win-commandingsurface-overflowbottom {
+        .win-commandingsurface-overflowareacontainer {
+            top: 100%;
+        }
+    }
+
+    &.win-commandingsurface-overflowtop {
+        .win-commandingsurface-overflowareacontainer {
+            bottom: 100%;
+        }
+    }
+
+    .win-commandingsurface-actionarea {
+        min-height: 24px;
+        vertical-align: top;
+        overflow: hidden;
+        #flex > .display-flex();
+        #flex > .justify-content(flex-end;);
+        #flex > .align-items(flex-start);
+
+        .win-commandingsurface-spacer {
+            visibility: hidden;
+            min-height: 48px; /* height of a primary command with no label */
+            width: 0px;
+        }
+
+        .win-command,
+        .win-commandingsurface-overflowbutton {
+            touch-action: manipulation;
+            #flex > .flex(none);
+        }
+
+        .win-commandingsurface-overflowbutton {
+            width: 32px; /* 30px + 2px border */
+            margin: 0px;
+            padding: 0px;
+            border-width: 1px;
+            border-style: dotted;
+            min-width: 0px;
+            min-height: 0px;
+            outline: none;
+            #flex > .align-self(stretch);
+            box-sizing: border-box;
+            background-clip: border-box;
+
+            .win-commandingsurface-ellipsis {
+                font-size: 16px;
+                font-family: "Segoe MDL2 Assets", "Symbols";
+
+                &::before {
+                    content: "\E10C";
+                }
+            }
+        }
+    }
+
+    &.win-commandingsurface-opened {
+        .win-commandingsurface-actionarea {
+            height: auto;
+        }
+
+        .win-commandingsurface-overflowarea,
+        .win-commandingsurface-overflowareacontainer {
+            display: block;
+        }
+    }
+
+    &.win-commandingsurface-closed {
+        &.win-commandingsurface-closeddisplayfull .win-commandingsurface-actionarea {
+            height: auto;
+        }
+
+        &.win-commandingsurface-closeddisplaycompact .win-commandingsurface-actionarea {
+            height: 48px;
+
+            .win-command .win-label {
+                display: none;
+            }
+        }
+
+        &.win-commandingsurface-closeddisplayminimal .win-commandingsurface-actionarea {
+            height: 24px;
+
+            .win-command, .win-commandingsurface-spacer {
+                display: none;
+            }
+        }
+
+        &.win-commandingsurface-closeddisplaynone {
+            display: none;
+        }
+
+        .win-commandingsurface-overflowarea,
+        .win-commandingsurface-overflowareacontainer {
+            display: none;
+        }
+    }
+
+    .win-commandingsurface-insetoutline {
+        /* Display none except in High Contrast scenarios */
+        display: none;
+    }
+
+    .win-commandingsurface-overflowareacontainer {
+        position: absolute;
+        overflow: hidden;
+        right: 0;
+        left: auto;
+
+        .RTL({
+            left: 0;
+            right: auto;
+        });
+    }
+
+    .win-commandingsurface-overflowarea,
+    .win-commandingsurface-overflowareacontainer {
+        min-width: 160px;
+        min-height: 0;
+        max-height: 50vh;
+        padding: 0;
+    }
+
+    .win-commandingsurface-overflowarea {
+        #flex > .display-flex();
+        #flex > .flex-direction(column);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &.win-menu {
+            max-width: 480px; /* override max-width styles from WinJS.UI.Menu */
+        }
+
+        .win-commandingsurface-spacer {
+            /* Reserves space at the bottom of the overflow area */
+            visibility: hidden;
+            height: 24px;
+        }
+
+        button.win-command {
+            #flex > .flex(none);
+            min-height: 44px;
+            border: 1px dotted transparent;
+            padding: 10px 11px 12px 11px;
+            ._win-type-body();
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        hr.win-command {
+            #flex > .flex(none);
+            height: 2px;
+            margin: 6px 12px 4px 12px;
+        }
+    }
+
+    .win-commandingsurface-actionareacontainer {
+        overflow: hidden;
+        position: relative;
+    }
+    // Hide the commands (or just command labels, where appropriate) when animating closed, but use opacity: 0 instead of display: none so the layout doesn't
+    // get changed and invalidate measurements taken during the animation function.
+    &.win-commandingsurface-closing.win-commandingsurface-closeddisplaycompact .win-command .win-label,
+    &.win-commandingsurface-closing.win-commandingsurface-closeddisplayminimal .win-command,
+    &.win-commandingsurface-closing.win-commandingsurface-closeddisplaynone .win-command {
+        opacity: 0;
+    }
+    
+    // When a command is in the CommandingSurface, the CommandingSurface will control the visibility thru
+    // the win-commandingsurface-command-hidden class in order to coordinate animations. Therefore, we
+    // overwrite the win-command-hidden to not actually affect the visibility.
+    .win-command.win-command-hidden {
+        display: inline-block;
+    }
+
+    .win-command.win-commandingsurface-command-hidden {
+        display: none;
+    }
+
+    .win-command.win-commandingsurface-command-primary-overflown,
+    .win-command.win-commandingsurface-command-secondary-overflown,
+    .win-command.win-commandingsurface-command-separator-hidden {
+        display: none;
+    }
+}
+
+@media(max-width:480px) {
+    .win-commandingsurface .win-commandingsurface-overflowarea.win-menu {
+        width: 100vw;
+    }
+}

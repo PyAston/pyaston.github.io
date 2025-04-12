@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>ali</title>
+
+    <!-- WinJS 引用 -->
+     <!--
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+-->
+    <!-- 引入 WinJS 样式 -->
+<link rel="stylesheet" href="https://unpkg.com/winjs@4.4.0/css/ui-dark.css" />
+
+<!-- 引入 WinJS JS 文件 -->
+<script src="https://unpkg.com/winjs@4.4.0/js/base.js"></script>
+<script src="https://unpkg.com/winjs@4.4.0/js/ui.js"></script>
+
+
+    <!-- ali 引用 -->
+    <link href="/alithefox/aliwuyu/css/default.css" rel="stylesheet" />
+    <script src="/alithefox/aliwuyu/js/jquery-1.8.2.min.js"></script>
+    <script src="/alithefox/aliwuyu/js/data.js"></script>
+    <script src="/alithefox/aliwuyu/js/default.js"></script>
+    <script src="/alithefox/aliwuyu/js/navigator.js"></script>
+    <script src="/alithefox/aliwuyu/js/function.js"></script>
+</head>
+<body>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/alithefox/aliwuyu/pages/items/items.html'}"></div>
+    <div id="backPic">
+        <button>更换壁纸</button>
+    </div>
+    <div id="backColor">
+        纯色&nbsp;<input title="背景色调节" type="range" id="color" min="0" max="16777215" step="1234567" value="2697513"/>
+    </div>
+    <select id="music">
+        <option value="Amy Diamond - Heartbeats.mp3">Amy Diamond - Heartbeats</option>
+        <option value="Colbie Caillat - What If.mp3">Colbie Caillat - What If</option>
+        <option value="Devotion（乐队） - My prayer.mp3">Devotion（乐队） - My prayer</option>
+        <option value="James Blunt - You Are Beautiful.mp3">James Blunt - You Are Beautiful</option>
+        <option value="Kenichiro Nishihara - Say You Love Me.mp3">Kenichiro Nishihara - Say You Love Me</option>
+        <option value="Lady Antebellum - Need You Now.mp3">Lady Antebellum - Need You Now</option>
+        <option value="Sweetbox - We Can Work It Out.mp3">Sweetbox - We Can Work It Out</option>
+        <option value="Tata Young - I Think Of You 想起你.mp3">Tata Young - I Think Of You 想起你</option>
+        <option value="Taylor Swift - Speak Now.mp3">Taylor Swift - Speak Now</option>
+        <option value="Whitney Houston - Nothing But Love.mp3">Whitney Houston - Nothing But Love</option>
+        <option value="安又琪 - 有你陪着我.mp3">安又琪 - 有你陪着我</option>
+        <option value="黄义达 - 那女孩对我说.mp3" selected="selected">黄义达 - 那女孩对我说</option>
+        <option value="林俊杰 - 那些你很冒险的梦.mp3">林俊杰 - 那些你很冒险的梦</option>
+        <option value="薛凯琪 - 复刻记忆.mp3">薛凯琪 - 复刻记忆</option>
+        <option value="宝贝.wma">宝贝</option>
+    </select>
+    <img id="button" src="/alithefox/aliwuyu/source/pause.png" />
+    <audio loop id="m">
+	    <source id="source" src="/alithefox/aliwuyu/source/黄义达 - 那女孩对我说.mp3" type="audio/mpeg">
+    </audio>
+    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
+    </div> -->
+</body>
+</html>

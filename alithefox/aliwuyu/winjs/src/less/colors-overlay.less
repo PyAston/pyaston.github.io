@@ -1,0 +1,327 @@
+// Copyright (c) Microsoft Corporation.  All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information.
+#win-overlay {
+    .variableDefs(@theme) when not (@theme = highcontrast) {
+        .colorDefinitions(@theme);
+
+        @accentColorDefaultOpacity: @listSelectRestOpacity;
+        @accentColorHoverOpacity: @listSelectHoverOpacity;
+        @accentColorActiveOpacity: @listSelectPressOpacity;
+        @borderColor: @baseHigh;
+        @textColor: @baseHigh;
+        @textColorDisabled: @baseLow;
+        @textColorActive: @baseHigh;
+        @textColorSelected: @baseHigh;
+        @textColorHover: @baseHigh;
+        @separatorBackgroundColor: @baseMediumMid;
+        @appbarBackgroundColor: @chromeMid;
+        @appbarBorderColor: @chromeMid;
+        @commandHoverBackgroundColor: @listHover;
+        @commandActiveBackgroundColor: @listPress;
+        @flyoutBackgroundColor: @altHigh;
+        @menuCommandActiveBackgroundColor: @listPress;
+        @menuCommandHoverBackgroundColor: @listHover;
+        @menuCommandDisabledColor: @baseLow;
+        @settingsFlyoutBackgroundColor: @altHigh;
+    }
+
+    .variableDefs(highcontrast) {
+        @accentColorDefaultOpacity: 1;
+        @accentColorHoverOpacity: 1;
+        @accentColorActiveOpacity: 1;
+        @borderColor: ButtonText;
+        @textColor: ButtonText;
+        @textColorDisabled: GrayText;
+        @textColorActive: ButtonText;
+        @textColorSelected: ButtonText;
+        @textColorHover: HighlightText;
+        @separatorBackgroundColor: ButtonText;
+        @appbarBackgroundColor: ButtonFace;
+        @appbarBorderColor: Highlight;
+        @commandHoverBackgroundColor: Highlight;
+        @commandActiveBackgroundColor: Highlight;
+        @flyoutBackgroundColor: ButtonFace;
+        @menuCommandActiveBackgroundColor: Highlight;
+        @menuCommandHoverBackgroundColor: Highlight;
+        @menuCommandDisabledColor: GrayText;
+        @settingsFlyoutBackgroundColor: ButtonFace;
+    }
+
+    .stylesForTheme(@theme) {
+        #win-overlay > .variableDefs(@theme);
+
+        .win-overlay {
+            outline: none;
+        }
+
+        hr.win-command {
+            background-color: @separatorBackgroundColor;
+        }
+
+        div.win-command,
+        button.win-command {
+            border-color: transparent;
+            background-color: transparent;
+        }
+
+        div.win-command:hover:active,
+        button.win-command:hover:active {
+            border-color: transparent;
+        }
+
+        button:enabled.win-command.win-keyboard:focus,
+        div.win-command.win-keyboard:focus,
+        button:enabled.win-command.win-command.win-keyboard:hover:focus,
+        div.win-command.win-command.win-keyboard:hover:focus {
+            border-color: @borderColor;
+        }
+
+        .win-commandimage {
+            color: @textColor;
+        }
+
+        button.win-command.win-command:enabled:hover:active,
+        button.win-command.win-command:enabled:active {
+            background-color: @commandActiveBackgroundColor;
+            color: @textColorActive;
+        }
+
+        button:enabled:hover:active .win-commandimage,
+        button:enabled:active .win-commandimage {
+            color: @textColorActive;
+        }
+
+        button:disabled .win-commandimage,
+        button:disabled:active .win-commandimage {
+            color: @textColorDisabled;
+        }
+
+        button .win-label {
+            color: @textColor;
+        }
+
+        button[aria-checked=true]:enabled .win-label,
+        button[aria-checked=true]:enabled .win-commandimage,
+        button[aria-checked=true]:enabled:hover:active .win-commandimage.win-commandimage {
+            color: @textColorSelected;
+        }
+
+        button[aria-checked=true]:-ms-keyboard-active .win-commandimage {
+            color: @textColorSelected;
+        }
+
+        button[aria-checked=true].win-command:before {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: @accentColorDefaultOpacity;
+            box-sizing: content-box;
+            content: "";
+            /* We want this pseudo element to cover the border of its parent. */
+            /* Put a 1px border on this element to make it larger and then set its top/left to -1px.*/
+            border-width: 1px;
+            border-style: solid;
+            top: -1px;
+            left: -1px;
+        }
+
+        button.win-command:enabled:-ms-keyboard-active {
+            background-color: @commandActiveBackgroundColor;
+            color: @textColor;
+        }
+
+        button[aria-checked=true].win-command:enabled:hover:active {
+            background-color: transparent;
+        }
+
+        button.win-command:disabled,
+        button.win-command:disabled:hover:active {
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        button.win-command:disabled .win-label,
+        button.win-command:disabled:active .win-label {
+            color: @textColorDisabled;
+        }
+
+        &.win-navbar, .win-navbar {
+            background-color: @appbarBackgroundColor;
+            border-color: @appbarBorderColor;
+
+            &.win-menulayout {
+                .win-navbar-menu,
+                .win-toolbar {
+                    background-color: inherit;
+                }
+            }
+
+            button.win-navbar-invokebutton.win-navbar-invokebutton {
+                background-color: transparent;
+                outline: none;
+                border-color: transparent;
+
+                &:enabled {
+                    &:-ms-keyboard-active {
+                        // Override intrinsic button element styles
+                        background-color: transparent;
+                    }
+
+                    .win-navbar-ellipsis {
+                        color: @textColor;
+                    }
+
+                    &.win-keyboard:focus {
+                        border-color: @borderColor;
+                    }
+                }
+
+                &:disabled {
+                    &:active, &:hover:active {
+                        background-color: transparent;
+                    }
+
+                    .win-navbar-ellipsis {
+                        color: @textColorDisabled;
+                    }
+                }
+            }
+            // When the LegacyAppBar is hiding or hidden, the entire invokebutton has a hover background.
+            &.win-navbar-closing, &.win-navbar-closed,
+            &.win-navbar-opening, &.win-navbar-opened {
+                button.win-navbar-invokebutton.win-navbar-invokebutton:enabled:hover:active {
+                    background-color: @commandActiveBackgroundColor;
+
+                    .win-navbar-ellipsis {
+                        color: @textColorActive;
+                    }
+                }
+            }
+        }
+
+        &.win-flyout, .win-flyout {
+            background-color: @flyoutBackgroundColor;
+        }
+
+        .win-settingsflyout {
+            background-color: @settingsFlyoutBackgroundColor;
+        }
+
+        &.win-menu button, .win-menu button {
+            background-color: transparent;
+            color: @textColor;
+        }
+
+        .win-menu button.win-command.win-command:enabled:hover:active,
+        .win-menu button[aria-checked=true].win-command.win-command:enabled:hover:active {
+            background-color: @menuCommandActiveBackgroundColor;
+            color: @textColorActive;
+        }
+
+        &.win-menu-containsflyoutcommand button.win-command-flyout-activated:before,
+        .win-menu-containsflyoutcommand button.win-command-flyout-activated:before {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: @listSelectRestOpacity;
+            content: "";
+            box-sizing: content-box;
+            /* We want this pseudo element to cover the border of its parent. */
+            /* Put a 1px border on this element to make it larger and then set its top/left to -1px.*/
+            border-width: 1px;
+            border-style: solid;
+            top: -1px;
+            left: -1px;
+        }
+
+        &.win-menu button[aria-checked=true].win-command:before,
+        .win-menu button[aria-checked=true].win-command:before {
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        &.win-menu button:disabled, .win-menu button:disabled,
+        &.win-menu button:disabled:active, .win-menu button:disabled:active {
+            background-color: transparent;
+            color: @menuCommandDisabledColor;
+        }
+    }
+
+    .stylesForThemeHover(@theme) {
+        #win-overlay > .variableDefs(@theme);
+        /* LegacyAppBar control colors */
+        &.win-navbar, .win-navbar {
+
+            button.win-navbar-invokebutton:enabled:hover,
+            button.win-navbar-invokebutton:disabled:hover {
+                background-color: transparent;
+            }
+            // When the LegacyAppBar is showing or shown, only the ellipsis has a hover background.*/
+            &.win-navbar-opening, &.win-navbar-opened {
+                button.win-navbar-invokebutton:enabled:hover {
+                    background-color: @commandHoverBackgroundColor;
+
+                    .win-navbar-ellipsis {
+                        color: @textColorHover;
+                    }
+                }
+            }
+            // When the LegacyAppBar is hiding or hidden, the entire invokebutton has a hover background.
+            &.win-navbar-closing, &.win-navbar-closed {
+                button.win-navbar-invokebutton:enabled:hover {
+                    background-color: @commandHoverBackgroundColor;
+
+                    .win-navbar-ellipsis {
+                        color: @textColorHover;
+                    }
+                }
+            }
+        }
+
+        button.win-command:enabled:hover {
+            background-color: @commandHoverBackgroundColor;
+            color: @textColorHover;
+
+            .win-commandglyph {
+                color: @textColorHover;
+            }
+        }
+
+        .win-menu button.win-command:enabled:hover {
+            background-color: @menuCommandHoverBackgroundColor;
+            color: @textColorHover;
+        }
+
+        button[aria-checked=true].win-command:hover {
+            background-color: transparent;
+        }
+
+        button:enabled[aria-checked=true].win-command:hover:before {
+            opacity: @accentColorHoverOpacity;
+        }
+
+        button:enabled[aria-checked=true].win-command:hover:active:before {
+            opacity: @accentColorActiveOpacity;
+        }
+    }
+}
+
+.Colors(@theme) {
+    #win-overlay > .stylesForTheme(@theme);
+}
+
+.ColorsHover(@theme) {
+    #win-overlay > .stylesForThemeHover(@theme);
+}
+
+.HighContrast() {
+    #win-overlay > .stylesForTheme(highcontrast);
+
+    button[aria-checked=true].win-command:before {
+        border-color: @commandActiveBackgroundColor;
+        background-color: @commandActiveBackgroundColor;
+    }
+}
+
+.HighContrastHover() {
+    #win-overlay > .stylesForThemeHover(highcontrast);
+}

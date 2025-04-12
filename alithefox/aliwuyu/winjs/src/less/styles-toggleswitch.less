@@ -1,0 +1,116 @@
+// Copyright (c) Microsoft Corporation.  All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information.
+
+.win-toggleswitch {
+    @trackWidth: 44px;
+    @trackHeight: 20px;
+    @trackBorderWidth: 2px;
+    @thumbDiameter: 10px;
+    @thumbOffset: (@trackHeight - 2 * @trackBorderWidth - @thumbDiameter) / 2;
+
+    .calculateThumbPos(@isRTL) when (@isRTL = false) {
+        @thumbPosOn: @trackWidth - @thumbDiameter - @trackBorderWidth - (@thumbDiameter / 2);
+        @thumbPosOff: @thumbOffset;
+    }
+    .calculateThumbPos(@isRTL) when (@isRTL = true) {
+        @thumbPosOn: @thumbOffset;
+        @thumbPosOff: @trackWidth - @thumbDiameter - @trackBorderWidth - (@thumbDiameter / 2);
+    }
+    .calculateThumbPos(false);
+
+    .rtlDependentStyles(@isRTL) {
+        .calculateThumbPos(@isRTL);
+
+        &.win-toggleswitch-on .win-toggleswitch-thumb {
+            left: @thumbPosOn;
+        }
+        &.win-toggleswitch-off .win-toggleswitch-thumb {
+            left: @thumbPosOff;
+        }
+    }
+
+    outline: 0;
+
+    .win-toggleswitch-header {
+        max-width: 470px;
+        margin-bottom: 14px;
+        margin-top: 22px;
+        ._win-type-body();
+    }
+    .win-toggleswitch-values {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .win-toggleswitch-value {
+        margin-left: 12px;
+        height: @trackHeight;
+        vertical-align: top;
+        ._win-type-body(@lineHeight: @trackHeight);
+    }
+    .win-toggleswitch-description {
+        font-size: 12px;
+        width: 22em;
+        margin-top: 28px;
+        // Not supported for now
+        display: none;
+    }
+    .win-toggleswitch-clickregion {
+        display: inline-block;
+        touch-action: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        padding-top: 5px;
+    }
+    .win-toggleswitch-track {
+        position: relative;
+        display: inline-block;
+        width: @trackWidth;
+        height: @trackHeight;
+        border-style: solid;
+        border-width: @trackBorderWidth;
+        border-radius: @trackHeight / 2;
+        box-sizing: border-box;
+    }
+    .win-toggleswitch-thumb {
+        position: absolute;
+        top: @thumbOffset;
+        display: inline-block;
+        width: @thumbDiameter;
+        height: @thumbDiameter;
+        border-radius: @thumbDiameter / 2;
+        -webkit-transition: left 0.1s;
+        transition: left 0.1s;
+    }
+    &:focus {
+        .win-toggleswitch-clickregion {
+            outline-width: 1px;
+            outline-style: dotted;
+        }
+    }
+    &.win-toggleswitch-dragging {
+        .win-toggleswitch-thumb {
+            -webkit-transition: none;
+            transition: none;
+        }
+    }
+    &.win-toggleswitch-off .win-toggleswitch-value-on {
+        visibility: hidden;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+    &.win-toggleswitch-on .win-toggleswitch-value-off {
+        visibility: hidden;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .rtlDependentStyles(false);
+
+    .RTL({
+        direction: rtl;
+        .rtlDependentStyles(true);
+    });
+}
