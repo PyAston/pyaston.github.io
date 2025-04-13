@@ -840,7 +840,7 @@ button {
 }
 
 .page-1 {
-    background: #fff url(../img/iali53.jpg) bottom right no-repeat;
+    background: #fff url(https://uchat.cn-bj.ufileos.com/rw_3a7c87dd-20b5-476e-a85e-2dd427261b44_iali53.jpg) bottom right no-repeat;
     text-align: left
 }
 
@@ -966,7 +966,7 @@ button {
 }
 
 .page-10 {
-    background: url(../img/iali22_bg.jpg)
+    background: url(https://uchat.cn-bj.ufileos.com/rw_9abee83d-4b3a-46c5-b510-3fefedf5c03b_iali22_bg.jpg)
 }
 
 .page-12 {
@@ -1005,7 +1005,7 @@ button {
 }
 
 .page-15 {
-    background: #dcf2fa url(../img/iali45_bg.jpg)
+    background: #dcf2fa url(https://uchat.cn-bj.ufileos.com/rw_3495e76d-af9c-407d-a430-018d2acac6f5_iali45_bg.jpg)
 }
 
 .page-16 {
@@ -1017,7 +1017,7 @@ button {
 }
 
 .page-19 {
-    background-image: url(../img/iali75_bg.jpg)
+    background-image: url(https://uchat.cn-bj.ufileos.com/rw_d4aa2252-181a-4cb2-bd3d-70487bce7ba1_iali75_bg.jpg)
 }
 
 .page-19 h3 {
@@ -1041,7 +1041,7 @@ button {
 }
 
 .page-21 {
-    background: #fbf2a3 url(../img/iali59_bg.jpg)
+    background: #fbf2a3 url(https://uchat.cn-bj.ufileos.com/rw_395637a2-5570-40cb-9b28-04dc97952acd_iali59_bg.jpg)
 }
 
 .page-22 {
@@ -1073,7 +1073,7 @@ button {
 }
 
 .page-28 {
-    background: #b7e7f3 url(../img/iali40_bg.jpg) bottom repeat-x;
+    background: #b7e7f3 url(https://uchat.cn-bj.ufileos.com/rw_93a29c87-4576-4ef1-9ec0-0cef3a0c3034_iali40_bg.jpg) bottom repeat-x;
     padding: 0
 }
 
@@ -1105,7 +1105,7 @@ button {
 }
 
 .page-30 {
-    background: #fff url(../img/iali76_bg.png) center bottom repeat-x;
+    background: #fff url(https://uchat.cn-bj.ufileos.com/rw_8ad54a7b-1a22-47a2-9b41-2a75b0d61e9e_iali76_bg.png) center bottom repeat-x;
     padding: 0;
     padding: 0
 }
@@ -1135,7 +1135,7 @@ button {
 }
 
 .page-34 {
-    background: #94c2e3 url(../img/iali57.jpg) left bottom no-repeat
+    background: #94c2e3 url(https://uchat.cn-bj.ufileos.com/rw_bf8bea09-e4b0-4b86-883f-44fb76fcadc5_iali57.jpg) left bottom no-repeat
 }
 
 .page-34 h3 {
@@ -1143,7 +1143,7 @@ button {
 }
 
 .page-35 {
-    background: #fff url(../img/iali8_bg.png) left bottom repeat-x;
+    background: #fff url(https://uchat.cn-bj.ufileos.com/rw_ce3453a9-260a-4c36-8609-d883555ee7f3_iali8_bg.png) left bottom repeat-x;
     padding: 0
 }
 
@@ -1178,7 +1178,7 @@ button {
 }
 
 .page-39 {
-    background: #e8ccc1 url(../img/iali2_bg.jpg) repeat
+    background: #e8ccc1 url(https://uchat.cn-bj.ufileos.com/rw_4e3d3702-70ae-4a74-9778-3d7d09caf31b_iali2_bg.jpg) repeat
 }
 
 .page-40 {
@@ -1344,7 +1344,7 @@ button {
 }
 
 .page-51 {
-    background-image: url(../img/iali52.jpg);
+    background-image: url(https://uchat.cn-bj.ufileos.com/rw_9b949d17-5dfa-49eb-acaa-c67c8759921e_iali52.jpg);
     background-size: cover;
     background-color: #fff;
     text-align: left
@@ -1367,11 +1367,11 @@ button {
 }
 
 .page-54 {
-    background: #d3d2d0 url(../img/319280_bg.jpg) repeat
+    background: #d3d2d0 url(https://uchat.cn-bj.ufileos.com/rw_7dd9dcf8-067b-4dfa-ae14-c606f1f5fb6a_319280_bg.jpg) repeat
 }
 
 .page-54 .center-img {
-    background-image: url(../img/319280.jpg);
+    background-image: url(https://uchat.cn-bj.ufileos.com/rw_a244b1c6-f869-4d3f-b5c0-39c44c181bc0_319280.jpg);
     text-indent: -99999px
 }
 
@@ -1572,11 +1572,10 @@ button {
 }
 
 #on {
-    background: url("../img/music.png") left center no-repeat;
+    background: url("https://uchat.cn-bj.ufileos.com/rw_9b7b22ca-a3b9-4bca-840e-f8a542e3fc43_music.png") left center no-repeat;
 }
 
 #off {
-    background: url("../img/mute.png") left center no-repeat;
+    background: url("https://uchat.cn-bj.ufileos.com/rw_e7886efc-c060-4487-9353-1722acc652cf_mute.png") left center no-repeat;
     display: none;
 }
-  
