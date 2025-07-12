@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff4f6;
+  color: #333;
+}
+header {
+  background: linear-gradient(to right, #ff6b81, #ff4757);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item > a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  display: inline-block;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: #ff4757;
+  border-radius: 0 0 8px 8px;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.dropdown a {
+  color: #ff4757;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 1rem;
+  font-weight: normal;
+}
+.dropdown a:hover {
+  background-color: #ffe6ea;
+}
+.nav-item:hover .dropdown {
+  display: block;
+}
+main {
+  padding: 2rem;
+}
+section {
+  margin-bottom: 2rem;
+}
+h1, h2 {
+  color: #ff4757;
+}

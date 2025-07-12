@@ -1,108 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Ali the Fox</title>
-    <link rel="stylesheet" href="/assets/css/404page.css">
-    <style>
-        table {
-            border: 1px solid #000; /* 用实际颜色代替 $color_1 */
-            border-collapse: collapse;
-            border-spacing: 0;
-            margin-bottom: 1.5em;
-            width: 100%;
-            table-layout: auto;
-        }
-
-        .table-container {
-            max-width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        td {
-            line-height: 2.5em;
-            padding: 0.4em;
-            border-top: 1px solid #000; /* 用实际颜色代替 $color_1 */
-            border: 1px solid #000; /* 用实际颜色代替 $color_1 */
-        }
-
-        th {
-            background-color: #f0f0f0; /* 用实际颜色代替 $color_0 */
-            line-height: 2.5em;
-            padding: 0.4em;
-            color: #000; /* 用实际颜色代替 $color_1 */
-            border: 1px solid #000; /* 用实际颜色代替 $color_1 */
-        }
-
-        tr:nth-child(even) {
-            background-color: #f8f8f8;
-        }
-
-        tr:hover {
-            background-color: #e0e0e0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阿狸世界</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: "Segoe UI", sans-serif;
+    }
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #enter-button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #ff4757;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+    #enter-button:hover {
+      background-color: white;
+    }
+    body.loaded #splash {
+      display: none;
+    }
+    body.loaded aside,
+    body.loaded main {
+      display: flex;
+    }
+    aside {
+      width: 220px;
+      background-color: #ffeef0;
+      padding: 1.5rem;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      display: none;
+    }
+    aside h2 {
+      color: #ff4757;
+      margin-bottom: 1rem;
+    }
+    aside a {
+      display: block;
+      margin-bottom: 0.75rem;
+      color: #ff4757;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    aside a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      background-color: #fff4f6;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <div id="page-wrapper">    
-        <div class="page-blank-wrap">
-            <div class="site-error">
-                <div class="error-content">
-                <br>
-                    <h1>Ali the Fox</h1>
-                    <h2>时光匆匆，一路有狸。</h2>
-                    <h2>阿狸的旧时光，献给依然相信童话的你。</h2>
-                    <br><hr />
-                    <h4><a href="/alithefox/iieii-old/">阿狸的999封情书怀旧 旧版</a></h4>
-                    <h4><a href="/alithefox/iieii-new/">阿狸的999封情书怀旧 新版</a></h4>
-                    <h4><a href="/alithefox/a-li/">阿狸官网怀旧版</a></h4>
-                    <hr />
-                    <h2>来源公示</h2>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                              <tr>
-                                <th style="text-align: center">序号</th>
-                                <th style="text-align: center">名</th>
-                                <th style="text-align: center">网页文件来源</th>
-                                <th style="text-align: center">源网站</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td style="text-align: center">1</td>
-                                <td style="text-align: center">阿狸的999封情书怀旧 旧版</td>
-                                <td style="text-align: center">archive.org</td>
-                                <td style="text-align: center">iieii.com</td>
-                              </tr>
-                              <tr>
-                                <td style="text-align: center">2</td>
-                                <td style="text-align: center">阿狸的999封情书怀旧 新版</td>
-                                <td style="text-align: center">archive.org</td>
-                                <td style="text-align: center">iieii.com</td>
-                              </tr>
-							  <tr>
-                                <td style="text-align: center">3</td>
-                                <td style="text-align: center">阿狸官网怀旧版</td>
-                                <td style="text-align: center">archive.org</td>
-                                <td style="text-align: center">a-li.com.cn</td>
-                              </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <hr />
-                </div>
-                <h1><p style="color: red;">里面的所有联系方式，包括但不限于微信、QQ、支付宝等</p></h1>
-                <h1><p style="color: red;">以及各种购物信息，均为虚假信息，请勿相信！</p></h1>
-                <h1><p style="color: red;">造成的所有损失后果自负！</p></h1>
-                <h1><p style="color: red;">如有侵权，请联系我删除！</p></h1>
-                <img src="/assets/img/404page/error-bg.svg" style="padding:20px 0 12px;">
-            </div>
-        </div>     
-    </div>
+  <div id="splash">
+    <button id="enter-button">点击前往阿狸的小世界</button>
+  </div>
+
+  <aside>
+    <h2>阿狸世界</h2>
+    <a href="#intro">阿狸是谁？</a>
+    <a href="#peach">桃子的故事</a>
+    <a href="#love1">精选篇章</a>
+    <a href="#love2">情感语录</a>
+    <a href="#oldsite">官网截图</a>
+    <a href="#history">成长记忆</a>
+  </aside>
+
+  <main>
+    <section id="intro">
+      <h1>阿狸是谁？</h1>
+      <p>阿狸是Hans（徐瀚）创作的一只红色小狐狸，拥有丰富的内心世界和细腻的情感。他代表了童年、梦想与温柔的坚持。</p>
+    </section>
+
+    <section id="peach">
+      <h2>桃子的故事</h2>
+      <p>桃子是阿狸的心爱女孩，是一个粉色的小狐狸，性格温柔可爱，是阿狸寄出999封情书的主角。</p>
+    </section>
+
+    <section id="love1">
+      <h2>精选篇章</h2>
+      <p>“我会一直等你，像阿狸等桃子一样，不问归期，不言放弃。”</p>
+    </section>
+
+    <section id="love2">
+      <h2>阿狸的情感语录</h2>
+      <p>“如果我能变成一朵云，我希望下在你窗前，让你知道我在想你。”</p>
+    </section>
+
+    <section id="oldsite">
+      <h2>阿狸官网截图</h2>
+      <p>将来这里可以插入阿狸官网旧版本的截图，供大家怀旧回顾。</p>
+    </section>
+
+    <section id="history">
+      <h2>成长记忆</h2>
+      <p>记录阿狸从一个卡通形象到治愈无数人心灵的成长旅程。</p>
+    </section>
+  </main>
+
+  <script>
+    async function getRandomBackground() {
+      try {
+        const response = await fetch('background.txt');
+        const text = await response.text();
+        const lines = text.trim().split('\n');
+        const image = lines[Math.floor(Math.random() * lines.length)].trim();
+        document.getElementById('splash').style.backgroundImage = `url('${image}')`;
+      } catch (e) {
+        console.error('无法加载 background.txt', e);
+      }
+    }
+
+    document.getElementById('enter-button').addEventListener('click', () => {
+      document.body.classList.add('loaded');
+    });
+
+    getRandomBackground();
+  </script>
 </body>
 </html>
