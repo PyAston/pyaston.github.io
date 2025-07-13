@@ -1,30 +1,34 @@
-// 定义一个全局命名空间 AliWorld，如果已经存在则使用原有的
 window.AliWorld = window.AliWorld || {};
 
-// 注册一个方法到命名空间
 AliWorld.initBackground = async function () {
-	try {
-		const response = await fetch('background.txt');
-		const text = await response.text();
-		const lines = text.trim().split('\n');
-		const image = lines[Math.floor(Math.random() * lines.length)].trim();
+  try {
+    // 1. 判断是否为手机设备
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-		const img = document.getElementById('bg-image');
-		img.style.opacity = '0'; // 设置初始透明
+    // 2. 根据设备类型选择不同的背景文件
+    const backgroundFile = isMobile ? 'background.phone.txt' : 'background.pc.txt';
 
-		// 确保加载完成后触发动画
-		img.onload = () => {
-			// 强制触发 reflow，确保 transition 生效
-			void img.offsetWidth;
-			img.style.opacity = '1'; // 渐变显示
-		};
+    // 3. 加载背景链接列表
+    const response = await fetch(backgroundFile);
+    const text = await response.text();
+    const lines = text.trim().split('\n');
+    const image = lines[Math.floor(Math.random() * lines.length)].trim();
 
-		img.onerror = () => {
-			console.error('背景图加载失败：', image);
-		};
+    const img = document.getElementById('bg-image');
+    img.style.opacity = '0';
 
-		img.src = image;
-	} catch (e) {
-		console.error('无法加载 background.txt', e);
-	}
+    // 4. 等加载完成再渐变显示
+    img.onload = () => {
+      void img.offsetWidth; // 触发重绘以确保过渡动画生效
+      img.style.opacity = '1';
+    };
+
+    img.onerror = () => {
+      console.error('背景图加载失败：', image);
+    };
+
+    img.src = image;
+  } catch (e) {
+    console.error('无法加载背景图片：', e);
+  }
 };
