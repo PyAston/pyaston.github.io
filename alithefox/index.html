@@ -1,149 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>阿狸世界</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      font-family: "Segoe UI", sans-serif;
-    }
-    #splash {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-    #enter-button {
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      background-color: rgba(255, 255, 255, 0.8);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #ff4757;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      transition: background-color 0.3s;
-    }
-    #enter-button:hover {
-      background-color: white;
-    }
-    body.loaded #splash {
-      display: none;
-    }
-    body.loaded aside,
-    body.loaded main {
-      display: flex;
-    }
-    aside {
-      width: 220px;
-      background-color: #ffeef0;
-      padding: 1.5rem;
-      height: 100vh;
-      position: sticky;
-      top: 0;
-      display: none;
-    }
-    aside h2 {
-      color: #ff4757;
-      margin-bottom: 1rem;
-    }
-    aside a {
-      display: block;
-      margin-bottom: 0.75rem;
-      color: #ff4757;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    aside a:hover {
-      text-decoration: underline;
-    }
-    main {
-      flex-grow: 1;
-      padding: 2rem;
-      background-color: #fff4f6;
-      display: none;
-    }
-  </style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>阿狸世界</title>
+	<link rel="stylesheet" href="/assets/css/ali.css" />
 </head>
+
 <body>
-  <div id="splash">
-    <button id="enter-button">点击前往阿狸的小世界</button>
-  </div>
+	<script src="/assets/js/ali.background.js"></script>
+	<div id="splash">
+		<img id="bg-image" src="" alt="背景图" />
+		<button id="enter-button">点击前往阿狸的小世界</button>
+	</div>
 
-  <aside>
-    <h2>阿狸世界</h2>
-    <a href="#intro">阿狸是谁？</a>
-    <a href="#peach">桃子的故事</a>
-    <a href="#love1">精选篇章</a>
-    <a href="#love2">情感语录</a>
-    <a href="#oldsite">官网截图</a>
-    <a href="#history">成长记忆</a>
-  </aside>
+	<aside>
+		<h2>阿狸世界</h2>
+		<a href="#intro">阿狸是谁？</a>
+		<a href="#peach">桃子的故事</a>
+		<a href="#love1">精选篇章</a>
+		<a href="#love2">情感语录</a>
+		<a href="#oldsite">官网截图</a>
+		<a href="#history">成长记忆</a>
+	</aside>
 
-  <main>
-    <section id="intro">
-      <h1>阿狸是谁？</h1>
-      <p>阿狸是Hans（徐瀚）创作的一只红色小狐狸，拥有丰富的内心世界和细腻的情感。他代表了童年、梦想与温柔的坚持。</p>
-    </section>
+	<main>
+		<section id="intro">
+			<h1>阿狸是谁？</h1>
+			<p>阿狸是Hans（徐瀚）创作的一只红色小狐狸，拥有丰富的内心世界和细腻的情感。他代表了童年、梦想与温柔的坚持。</p>
+		</section>
 
-    <section id="peach">
-      <h2>桃子的故事</h2>
-      <p>桃子是阿狸的心爱女孩，是一个粉色的小狐狸，性格温柔可爱，是阿狸寄出999封情书的主角。</p>
-    </section>
+		<section id="peach">
+			<h2>桃子的故事</h2>
+			<p>桃子是阿狸的心爱女孩，是一个粉色的小狐狸，性格温柔可爱，是阿狸寄出999封情书的主角。</p>
+		</section>
 
-    <section id="love1">
-      <h2>精选篇章</h2>
-      <p>“我会一直等你，像阿狸等桃子一样，不问归期，不言放弃。”</p>
-    </section>
+		<section id="love1">
+			<h2>精选篇章</h2>
+			<p>“我会一直等你，像阿狸等桃子一样，不问归期，不言放弃。”</p>
+		</section>
 
-    <section id="love2">
-      <h2>阿狸的情感语录</h2>
-      <p>“如果我能变成一朵云，我希望下在你窗前，让你知道我在想你。”</p>
-    </section>
+		<section id="love2">
+			<h2>阿狸的情感语录</h2>
+			<p>“如果我能变成一朵云，我希望下在你窗前，让你知道我在想你。”</p>
+		</section>
 
-    <section id="oldsite">
-      <h2>阿狸官网截图</h2>
-      <p>将来这里可以插入阿狸官网旧版本的截图，供大家怀旧回顾。</p>
-    </section>
+		<section id="oldsite">
+			<h2>阿狸官网截图</h2>
+			<p>将来这里可以插入阿狸官网旧版本的截图，供大家怀旧回顾。</p>
+		</section>
 
-    <section id="history">
-      <h2>成长记忆</h2>
-      <p>记录阿狸从一个卡通形象到治愈无数人心灵的成长旅程。</p>
-    </section>
-  </main>
+		<section id="history">
+			<h2>成长记忆</h2>
+			<p>记录阿狸从一个卡通形象到治愈无数人心灵的成长旅程。</p>
+		</section>
+	</main>
 
-  <script>
-    async function getRandomBackground() {
-      try {
-        const response = await fetch('background.txt');
-        const text = await response.text();
-        const lines = text.trim().split('\n');
-        const image = lines[Math.floor(Math.random() * lines.length)].trim();
-        document.getElementById('splash').style.backgroundImage = `url('${image}')`;
-      } catch (e) {
-        console.error('无法加载 background.txt', e);
-      }
-    }
+	<script>AliWorld.initBackground();</script>
 
-    document.getElementById('enter-button').addEventListener('click', () => {
-      document.body.classList.add('loaded');
-    });
-
-    getRandomBackground();
-  </script>
 </body>
+
 </html>
