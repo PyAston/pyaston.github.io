@@ -2,33 +2,43 @@ window.AliWorld = window.AliWorld || {};
 
 AliWorld.initBackground = async function () {
   try {
-    // 1. 判断是否为手机设备
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    // 2. 根据设备类型选择不同的背景文件
-    const backgroundFile = isMobile ? 'background.phone.txt' : 'background.pc.txt';
+    // 根据设备类型选择路径和文件名
+    const config = isMobile
+      ? {
+          txtFile: '/assets/img/alithefox/background.pe.txt',
+          imgBase: 'https://gcore.jsdelivr.net/gh/PyAston/pyaston.github.io/assets/img/alithefox/background-pe/',
+        }
+      : {
+          txtFile: 'background.pc.txt',
+          imgBase: 'https://gcore.jsdelivr.net/gh/PyAston/pyaston.github.io/assets/img/alithefox/background-pc/',
+        };
 
-    // 3. 加载背景链接列表
-    const response = await fetch(backgroundFile);
+    // 加载文本列表
+    const response = await fetch(config.txtFile);
     const text = await response.text();
-    const lines = text.trim().split('\n');
-    const image = lines[Math.floor(Math.random() * lines.length)].trim();
+    const filenames = text.trim().split('\n').map(line => line.trim()).filter(Boolean);
 
+    // 随机选择图片
+    const chosen = filenames[Math.floor(Math.random() * filenames.length)];
+    const fullImageUrl = config.imgBase + chosen;
+
+    // 设置为背景图
     const img = document.getElementById('bg-image');
     img.style.opacity = '0';
 
-    // 4. 等加载完成再渐变显示
     img.onload = () => {
-      void img.offsetWidth; // 触发重绘以确保过渡动画生效
+      void img.offsetWidth; // 强制重绘，确保动画生效
       img.style.opacity = '1';
     };
 
     img.onerror = () => {
-      console.error('背景图加载失败：', image);
+      console.error('背景图加载失败：', fullImageUrl);
     };
 
-    img.src = image;
+    img.src = fullImageUrl;
   } catch (e) {
-    console.error('无法加载背景图片：', e);
+    console.error('读取背景图失败：', e);
   }
 };
