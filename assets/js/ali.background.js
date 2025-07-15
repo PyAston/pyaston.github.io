@@ -22,7 +22,7 @@ AliWorld.initBackground = async function () {
 
     // 随机选择图片
     const chosen = filenames[Math.floor(Math.random() * filenames.length)];
-    const fullImageUrl = config.imgBase + chosen;
+    const fullImageUrl =chosen;
 
     // 设置为背景图
     const img = document.getElementById('bg-image');
