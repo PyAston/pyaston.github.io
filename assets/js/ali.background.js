@@ -11,7 +11,7 @@ AliWorld.initBackground = async function () {
           imgBase: 'https://gcore.jsdelivr.net/gh/PyAston/pyaston.github.io/assets/img/alithefox/background-pe/',
         }
       : {
-          txtFile: 'background.pc.txt',
+          txtFile: '/assets/img/alithefox/background.pc.txt',
           imgBase: 'https://gcore.jsdelivr.net/gh/PyAston/pyaston.github.io/assets/img/alithefox/background-pc/',
         };
 
