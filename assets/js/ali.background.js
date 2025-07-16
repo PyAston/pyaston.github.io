@@ -8,11 +8,9 @@ AliWorld.initBackground = async function () {
     const config = isMobile
       ? {
           txtFile: '/assets/img/alithefox/background.pe.txt',
-          imgBase: 'https://gcore.jsdelivr.net/gh/PyAston/pyaston.github.io/assets/img/alithefox/background-pe/',
         }
       : {
           txtFile: '/assets/img/alithefox/background.pc.txt',
-          imgBase: 'https://gcore.jsdelivr.net/gh/PyAston/pyaston.github.io/assets/img/alithefox/background-pc/',
         };
 
     // 加载文本列表
@@ -41,4 +39,8 @@ AliWorld.initBackground = async function () {
   } catch (e) {
     console.error('读取背景图失败：', e);
   }
+
+  document.getElementById('enter-button')?.addEventListener('click', () => {
+    document.body.classList.add('loaded');
+  });
 };

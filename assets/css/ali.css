@@ -1,114 +1,190 @@
-html,
-body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	font-family: "Segoe UI", sans-serif;
+/* 重置和基础 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+  /* body背景透明，避免覆盖背景图 */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 背景图，固定铺满屏幕，默认透明 */
+#bg-image {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -10; /* 保证在最底层 */
+  opacity: 1; /* 直接显示，不用用类控制 */
+  transition: opacity 1s ease;
+}
+
+/* body加.loaded时，背景图淡入显示 */
+body.loaded #bg-image {
+  opacity: 1;
+}
+
+/* 启动画面覆盖全屏，最顶层 */
 #splash {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	overflow: hidden;
-	z-index: 9999;
-	background-color: pink;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
 }
 
 #splash img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: -1;
-}
-
-#enter-button {
-	padding: 1rem 2rem;
-	font-size: 1.2rem;
-	background-color: rgba(255, 255, 255, 0.8);
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	font-weight: bold;
-	color: #ff4757;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	transition: background-color 0.3s;
-}
-
-#enter-button:hover {
-	background-color: white;
-}
-
-body.loaded #splash {
-	display: none;
-}
-
-body.loaded aside,
-body.loaded main {
-	display: flex;
-}
-
-aside {
-	width: 220px;
-	background-color: #ffeef0;
-	padding: 1.5rem;
-	height: 100vh;
-	position: sticky;
-	top: 0;
-	display: none;
-	flex-direction: column;
-}
-
-aside h2 {
-	color: #ff4757;
-	margin-bottom: 1rem;
-}
-
-aside a {
-	display: block;
-	margin-bottom: 0.75rem;
-	color: #ff4757;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-aside a:hover {
-	text-decoration: underline;
-}
-
-main {
-	flex-grow: 1;
-	padding: 2rem;
-	background-color: #fff4f6;
-	display: none;
-}
-
-body {
-	display: flex;
-}
-
-#bg-image {
-  opacity: 0;
-  transition: opacity 1s ease;
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
 }
 
+/* 启动画面按钮 */
+#enter-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff4757;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
 
-#bg-image.loaded {
-	opacity: 1;
+#enter-button:hover {
+  background-color: white;
+}
+
+/* 页面加载完，隐藏启动页 */
+body.loaded #splash {
+  display: none;
+}
+
+/* 主页面整体容器 */
+#main-wrapper {
+  max-width: 1100px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  /* 显示状态控制 */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  background-color: transparent; /* 透明，不遮挡背景图 */
+}
+
+/* body.loaded时，主内容显现 */
+body.loaded #main-wrapper {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* 顶部导航栏，半透明红色背景，白色文字 */
+header {
+  background-color: rgba(255, 71, 87, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 导航链接 */
+header nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* 页面主区域容器，横向排列侧边栏和主内容 */
+.page-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 侧边栏，半透明白底 */
+aside {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 220px;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  color: #ff4757;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* 侧边栏链接样式，粉红按钮，白色文字 */
+aside a {
+  background-color: #ff85b3;
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+aside a:hover {
+  background-color: #ff6a9e;
+}
+
+/* 主内容区域，半透明绿色底 */
+main {
+  flex-grow: 1;
+  background-color: rgba(168, 230, 163, 0.5);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 70vh;
+  color: #333;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  aside {
+    display: none;
+  }
+
+  main {
+    padding: 1rem;
+    height: auto;
+  }
 }
