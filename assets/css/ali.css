@@ -258,3 +258,17 @@ main {
 		transform: translateY(0);
 	}
 }
+
+aside a.fade-move {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+  display: block; /* 确保不是 display: none，否则动画无效 */
+}
+
+aside a.fade-move.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

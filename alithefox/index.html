@@ -18,37 +18,28 @@
 
 	<div id="main-wrapper">
 		<div id="content-tray">
-			<header>
-				阿狸的小世界
-				<nav style="float: right">
-					<a href="#intro" class="nav-btn" data-target="intro">介绍</a>
-					<a href="#peach" class="nav-btn" data-target="peach">桃子</a>
-					<a href="#love1" class="nav-btn" data-target="love1">语录</a>
-				</nav>
-			</header>
+			<!-- header -->
+<header>
+  <nav>
+    <a href="#intro" data-target="intro">阿狸介绍</a>
+    <a href="#peach" data-target="peach">桃子篇章</a>
+  </nav>
+</header>
 
-			<div class="page-container">
-				<aside>
-					<!-- 新增欢迎内容（默认显示） -->
-					<div id="welcome-content" class="content-section">
-						<p>欢迎来到阿狸的小世界！</p>
-					</div>
+<!-- 侧边栏 -->
+<aside>
+  <div id="welcome-content" class="fade-move show">欢迎来到阿狸的小世界！</div>
 
-					<!-- 原有按钮保持不变 -->
-					<a href="#intro">阿狸是谁？</a>
-					<a href="#peach">桃子的故事</a>
-					<a href="#love1">精选篇章</a>
-					<a href="#love2">情感语录</a>
-					<a href="#oldsite">官网截图</a>
-					<a href="#history">成长记忆</a>
+  <!-- 分组：intro -->
+  <a href="#intro" data-group="intro" class="fade-move">阿狸是谁？</a>
+  <a href="#history" data-group="intro" class="fade-move">成长记忆</a>
 
-					<!-- 新增内容区域（默认隐藏） -->
-					<div id="intro-content" class="content-section" style="display:none">
-						<h3>阿狸详细介绍</h3>
-						<p>这里是阿狸的详细内容...</p>
-					</div>
-					<!-- 其他内容区块同理... -->
-				</aside>
+  <!-- 分组：peach -->
+  <a href="#peach" data-group="peach" class="fade-move">桃子的故事</a>
+  <a href="#oldsite" data-group="peach" class="fade-move">官网截图</a>
+</aside>
+
+<!-- 内容区 -->
 				<main>
 					<h1>加班加点开发中aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
 					<h1>Aston & BG5JKH</h1>

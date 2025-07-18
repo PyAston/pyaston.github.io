@@ -37,37 +37,54 @@ AliWorld.initBackground = async function () {
   this.initNavigation(); // 新增此行
 };
 
-AliWorld.initNavigation = function() {
-  // 默认显示欢迎内容
-  document.getElementById('welcome-content').style.display = 'block';
-  
-  // 为导航按钮添加点击事件
+AliWorld.initNavigation = function () {
+  const welcome = document.getElementById('welcome-content');
+  const allSidebarLinks = document.querySelectorAll('aside a.fade-move');
+  const contentSections = document.querySelectorAll('.content-section');
+
+  // 初始化：隐藏所有按钮，仅欢迎语显示
+  allSidebarLinks.forEach(a => a.classList.remove('show'));
+  welcome.classList.add('show');
+
+  // 点击导航栏按钮
   document.querySelectorAll('header nav a').forEach(navBtn => {
-    navBtn.addEventListener('click', function(e) {
+    navBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      
-      // 隐藏所有内容区域（包括欢迎内容）
-      document.querySelectorAll('.content-section').forEach(section => {
-        section.style.display = 'none';
+      const group = this.dataset.target;
+
+      // 隐藏欢迎语
+      welcome.classList.remove('show');
+
+      // 隐藏全部按钮
+      allSidebarLinks.forEach(a => a.classList.remove('show'));
+
+      // 显示目标组按钮
+      document.querySelectorAll(`aside a[data-group="${group}"]`).forEach(a => {
+        a.classList.add('show');
       });
-      
-      // 显示对应内容
-      const targetId = this.getAttribute('href').substring(1) + '-content';
-      const targetContent = document.getElementById(targetId);
-      if (targetContent) {
-        targetContent.style.display = 'block';
-      } else {
-        // 如果没有对应内容，显示欢迎信息
-        document.getElementById('welcome-content').style.display = 'block';
+
+      // 隐藏所有内容区
+      contentSections.forEach(section => section.classList.remove('show'));
+
+      // 显示目标内容区
+      const targetMain = document.getElementById(`${group}-content`);
+      if (targetMain) {
+        targetMain.classList.add('show');
       }
     });
   });
-  
-  // 为侧边栏按钮也添加类似功能（可选）
-  document.querySelectorAll('aside a').forEach(btn => {
-    btn.addEventListener('click', function(e) {
+
+  // 点击侧边按钮显示内容
+  allSidebarLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
-      // 同样的内容切换逻辑...
+      const id = this.getAttribute('href').substring(1) + '-content';
+
+      contentSections.forEach(section => section.classList.remove('show'));
+      const target = document.getElementById(id);
+      if (target) {
+        target.classList.add('show');
+      }
     });
   });
 };
